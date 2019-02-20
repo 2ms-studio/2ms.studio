@@ -2,18 +2,28 @@ const { parse } = require('url');
 const read = require('node-readability');
 
 module.exports = (req, res) => {
-    const { query } = parse(req.url, true);
-    const { url } = query;
+    try {
+        const {
+            query: { url },
+        } = parse(req.url, true);
 
-    if (url) {
-        read(url, function(err, article, meta) {
-            if (err) res.end(err);
+        if (!url) throw 'no URL param';
 
-            const { content } = article;
-            article.close();
-            res.end(content);
+        read(url, function(err, { content, close }, meta) {
+            try {
+                close();
+                if (err) throw err;
+                if (meta.statusCode !== 200)
+                    throw `Error: ${meta.statusCode}\n${url} does not exist`;
+
+                res.end(content);
+            } catch (e) {
+                res.statusCode = 500;
+                res.end(e);
+            }
         });
-    } else {
-        res.end('You need to supply a URL param: ?url=https://etc');
+    } catch (e) {
+        res.statusCode = 500;
+        res.end(e);
     }
 };
