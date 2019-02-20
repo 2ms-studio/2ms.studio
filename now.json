@@ -1,5 +1,8 @@
 {
-    "name": "2ms.studio",
+    "name": "2ms",
     "version": 2,
-    "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+    "builds": [
+        { "src": "next.config.js", "use": "@now/next" },
+        { "src": "api/*.js", "use": "@now/node" }
+    ]
 }

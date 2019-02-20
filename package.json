@@ -1,6 +1,6 @@
 {
-    "name": "2.0",
-    "version": "1.0.0",
+    "name": "dantombs.net",
+    "version": "2.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -14,10 +14,9 @@
     "license": "ISC",
     "dependencies": {
         "@mdx-js/mdx": "^0.17.5",
-        "@zeit/next-css": "^1.0.1",
         "@zeit/next-mdx": "^1.2.0",
         "next": "^8.0.1",
-        "normalize.css": "^8.0.1",
+        "node-readability": "^3.0.0",
         "react": "^16.8.2",
         "react-dom": "^16.8.2"
     }
