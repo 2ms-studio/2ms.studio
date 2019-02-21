@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import Bio from '../content/bio.md';
+import BioContent from '../content/bio.md';
 
-export default () => (
+const Bio = () => (
     <div id="page">
         <Head>
             <title>Dan Tombs’ Bio</title>
         </Head>
-        <Bio />
+        <BioContent />
         <style jsx global>{`
             #page {
                 max-width: 60ch;
@@ -24,3 +24,5 @@ export default () => (
         `}</style>
     </div>
 );
+
+export default Bio;
