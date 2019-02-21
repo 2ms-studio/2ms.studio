@@ -23,5 +23,9 @@
         "react-dom": "^16.8.2",
         "webpack": "^4.4.0"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "@now/build-utils": "^0.4.34",
+        "@now/next": "^0.0.84",
+        "@now/node": "^0.4.28"
+    }
 }
