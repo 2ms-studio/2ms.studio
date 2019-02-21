@@ -43,6 +43,21 @@ class MyDocument extends Document {
                         font-size: 1em;
                         margin: 0;
                     }
+                    h1,
+                    h2,
+                    h3,
+                    h4,
+                    h5,
+                    li {
+                        margin-bottom: 1rem;
+                    }
+
+                    h1 {
+                        text-align: center;
+                        font-variant: small-caps;
+                        font-size: 150%;
+                        font-weight: normal;
+                    }
                     hr {
                         box-sizing: content-box;
                         height: 0;
@@ -50,12 +65,6 @@ class MyDocument extends Document {
                     a {
                         background-color: transparent;
                     }
-                    h1,
-                    h2,
-                    h3,
-                    h4,
-                    h5,
-                    h6,
                     b,
                     strong {
                         font-weight: bolder;

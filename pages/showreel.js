@@ -4,11 +4,12 @@ function IndexPage() {
     return (
         <>
             <Head>
-                <title>Showreel</title>
+                <title>Dan Tombs Showreel</title>
                 {/* hide the page from search engine results */}
                 <meta name="robots" content="noindex" />
             </Head>
             <div id="page">
+                <h1>Dan Tombs’ Showreel, 2018</h1>
                 <div id="wrapper">
                     <iframe
                         src="https://player.vimeo.com/video/309567641?color=fff&title=0&byline=0&portrait=0"
@@ -24,20 +25,25 @@ function IndexPage() {
                 body {
                     margin: 0;
                     background-color: #101010;
+                    color: #fff;
+                    -webkit-font-smoothing: antialiased;
                 }
                 #page {
-                    height: 100%;
-                    width: 100%;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
                     position: absolute;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    flex-direction: column;
+                    padding: 2em;
                 }
                 #wrapper {
                     padding: 56.25% 0 0 0;
                     position: relative;
-                    max-width: 640px;
-                    flex: 1;
+                    width: 100%;
                 }
                 iframe {
                     position: absolute;
