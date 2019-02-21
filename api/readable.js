@@ -10,10 +10,12 @@ module.exports = (req, res) => {
 
         if (!url) throw 'no URL param';
 
+        console.log(typeof url);
+
         read(url, function(err, article, meta) {
             if (err) {
                 res.statusCode = 500;
-                res.end(err);
+                res.end(err.message);
             }
 
             if (meta.statusCode !== 200) {
@@ -27,6 +29,6 @@ module.exports = (req, res) => {
         });
     } catch (e) {
         res.statusCode = 500;
-        res.end(e);
+        res.end(e.message);
     }
 };
