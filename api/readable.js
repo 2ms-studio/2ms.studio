@@ -11,6 +11,7 @@ module.exports = async (req, res) => {
         if (!url) throw 'no URL param';
 
         const { content, close } = await read(url);
+        res.statusCode = 200;
         res.end(content);
     } catch (e) {
         res.statusCode = 500;
