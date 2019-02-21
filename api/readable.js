@@ -1,8 +1,8 @@
 const { parse } = require('url');
 const { promisify } = require('util');
-const read = promisify(require('node-readability'));
+const read = require('node-readability');
 
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
     try {
         const {
             query: { url },
@@ -10,11 +10,21 @@ module.exports = async (req, res) => {
 
         if (!url) throw 'no URL param';
 
-        const { content, close } = await read(url);
-        close();
+        read(url, function(err, article, meta) {
+            if (err) {
+                res.statusCode = 500;
+                res.end(err);
+            }
 
-        res.statusCode = 200;
-        res.end(content);
+            if (meta.statusCode !== 200) {
+                res.statusCode = 500;
+                res.end(`Readability error: ${meta.statusCode}`);
+            }
+
+            res.statusCode = 200;
+            res.end(article.content);
+            article.close();
+        });
     } catch (e) {
         res.statusCode = 500;
         res.end(e);
