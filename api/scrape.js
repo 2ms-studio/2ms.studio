@@ -1,5 +1,4 @@
 const { parse } = require('url');
-
 const scrape = require('ascrape');
 
 module.exports = (req, res) => {
