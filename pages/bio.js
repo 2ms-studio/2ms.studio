@@ -11,8 +11,19 @@ const Bio = () => (
             #page {
                 max-width: 60ch;
                 margin: 2em auto;
+                padding: 0 2em;
             }
-            p,
+
+            p {
+                text-indent: 2ch;
+            }
+            p:first-of-type {
+                text-indent: 0;
+            }
+            p:first-of-type em {
+                font-variant: small-caps;
+                font-style: normal;
+            }
             h1,
             h2,
             h3,
@@ -20,6 +31,13 @@ const Bio = () => (
             h5,
             li {
                 margin-bottom: 1rem;
+            }
+
+            h1 {
+                text-align: center;
+                font-variant: small-caps;
+                font-size: 150%;
+                font-weight: normal;
             }
         `}</style>
     </div>

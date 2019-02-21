@@ -11,7 +11,7 @@ function IndexPage() {
             <div id="page">
                 <div id="wrapper">
                     <iframe
-                        src="https://player.vimeo.com/video/115137851?color=9d00ff&title=0&byline=0&portrait=0"
+                        src="https://player.vimeo.com/video/309567641?color=fff&title=0&byline=0&portrait=0"
                         frameborder="0"
                         webkitallowfullscreen
                         mozallowfullscreen

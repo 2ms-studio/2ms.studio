@@ -19,7 +19,7 @@ class MyDocument extends Document {
                 <style jsx global>{`
                     /* based on normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
                     html {
-                        line-height: 1.3;
+                        line-height: 1.4;
                         -webkit-text-size-adjust: 100%;
                     }
                     body {
