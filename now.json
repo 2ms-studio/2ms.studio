@@ -1,9 +1,10 @@
 {
-    "name": "2ms",
+    "name": "2MS",
     "version": 2,
     "builds": [
         { "src": "next.config.js", "use": "@now/next" },
         { "src": "api/*.js", "use": "@now/node" }
     ],
-    "routes": [{ "src": "/api/scrape", "dest": "/api/scrape.js" }]
+    "routes": [{ "src": "/api/scrape", "dest": "/api/scrape.js" }],
+    "alias": ["2MS"]
 }

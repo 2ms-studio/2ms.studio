@@ -5,9 +5,9 @@ function Home() {
     return (
         <div>
             <Head>
-                <title>2ms</title>
+                <title>2MS</title>
             </Head>
-            <h1>2ms</h1>
+            <h1>2MS</h1>
             <ul>
                 <li>
                     <Link href="/bio">
@@ -15,7 +15,7 @@ function Home() {
                     </Link>
                 </li>
                 <li>
-                    <a href="mailto:dan@2ms.studio">contact</a>
+                    <a href="mailto:dan@2MS.studio">contact</a>
                 </li>
             </ul>
 
