@@ -9,7 +9,7 @@ function IndexPage() {
                 <meta name="robots" content="noindex" />
             </Head>
             <div id="page">
-                <h1>Dan Tombs’ Showreel, 2018</h1>
+                <h1>Dan Tombs Showreel, 2018</h1>
                 <div id="wrapper">
                     <iframe
                         src="https://player.vimeo.com/video/309567641?color=fff&title=0&byline=0&portrait=0"
@@ -22,12 +22,6 @@ function IndexPage() {
             </div>
             <script src="https://player.vimeo.com/api/player.js" />
             <style jsx global>{`
-                body {
-                    margin: 0;
-                    background-color: #101010;
-                    color: #fff;
-                    -webkit-font-smoothing: antialiased;
-                }
                 #page {
                     top: 0;
                     right: 0;
