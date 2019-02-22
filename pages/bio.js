@@ -1,31 +1,15 @@
-import Head from 'next/head';
+import Page from '../components/page';
+import Head from '../components/head';
+import Markdown from '../components/markdown';
 import BioContent from '../content/bio.md';
 
 const Bio = () => (
-    <div id="page">
-        <Head>
-            <title>Dan Tombs’ Bio</title>
-        </Head>
-        <BioContent />
-        <style jsx global>{`
-            #page {
-                max-width: 60ch;
-                margin: 2em auto;
-                padding: 0 2em;
-            }
-
-            p {
-                text-indent: 2ch;
-            }
-            p:first-of-type {
-                text-indent: 0;
-            }
-            p:first-of-type em {
-                font-variant: small-caps;
-                font-style: normal;
-            }
-        `}</style>
-    </div>
+    <Page>
+        <Head title="Dan Tombs’ Bio" description="Dan Tombs Bio, 2018" />
+        <Markdown>
+            <BioContent />
+        </Markdown>
+    </Page>
 );
 
 export default Bio;
