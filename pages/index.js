@@ -1,12 +1,10 @@
-import Head from 'next/head';
 import Link from 'next/link';
+import Head from '../components/head';
+import Page from '../components/page';
 
 function Home() {
     return (
-        <div>
-            <Head>
-                <title>2MS</title>
-            </Head>
+        <Page align="center" direction="row">
             <h1>2MS</h1>
             <ul>
                 <li>
@@ -18,18 +16,7 @@ function Home() {
                     <a href="mailto:dan@2MS.studio">contact</a>
                 </li>
             </ul>
-
             <style jsx>{`
-                div {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
                 ul {
                     list-style: none;
                     padding: 0;
@@ -40,7 +27,7 @@ function Home() {
                     content: '·';
                 }
             `}</style>
-        </div>
+        </Page>
     );
 }
 
