@@ -1,6 +1,16 @@
 import Head from 'next/head';
 
-export default ({ title, description = '2MS.studio', children } = {}) => (
+export interface Props {
+    title?: string;
+    description?: string;
+    children?: JSX.Element[] | JSX.Element;
+}
+
+const Headd: React.FC<Props> = ({
+    title = '',
+    description = '2MS.studio',
+    children = [],
+} = {}) => (
     <>
         <Head>
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -70,3 +80,5 @@ export default ({ title, description = '2MS.studio', children } = {}) => (
         </style>
     </>
 );
+
+export default Headd;

@@ -1,10 +1,16 @@
-import Head from '../components/head';
+import Head from './head';
 
-const Page = ({
+export interface Props {
+    align?: string;
+    direction?: string;
+    children?: JSX.Element[] | JSX.Element;
+}
+
+const Page: React.FC<Props> = ({
     align = 'flex-start',
     direction = 'column',
     children,
-} = {}) => (
+}) => (
     <div>
         <Head />
         {children}
