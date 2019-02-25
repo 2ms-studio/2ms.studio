@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Head from '../components/head';
 import Page from '../components/page';
 
 function Home() {

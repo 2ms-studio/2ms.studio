@@ -2,12 +2,13 @@
     "name": "dantombs.net",
     "version": "2.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "pages/index.tsx",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "next",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "now-build": "next build"
     },
     "keywords": [],
     "author": "",
@@ -16,15 +17,18 @@
         "@babel/core": "^7.0.0-0",
         "@mdx-js/mdx": "^0.15.0",
         "@zeit/next-mdx": "^1.2.0",
+        "@zeit/next-typescript": "^1.1.1",
+        "add": "^2.0.6",
         "ascrape": "^0.2.0",
         "next": "^8.0.1",
         "react": "^16.8.2",
         "react-dom": "^16.8.2",
-        "webpack": "^4.4.0"
+        "webpack": "^4.4.0",
+        "yarn": "^1.13.0"
     },
     "devDependencies": {
-        "@now/build-utils": "^0.4.34",
-        "@now/next": "^0.0.84",
-        "@now/node": "^0.4.28"
+        "@types/next": "^8.0.1",
+        "@types/styled-jsx": "^2.2.8",
+        "next-size": "^2.0.2"
     }
 }

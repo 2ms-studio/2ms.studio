@@ -1,8 +1,14 @@
+const withTypescript = require('@zeit/next-typescript');
 const withMDX = require('@zeit/next-mdx')({
     extension: /\.(md|mdx)$/,
 });
+const withSize = require('next-size');
 
-module.exports = withMDX({
-    pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-    target: 'serverless',
-});
+module.exports = withSize(
+    withMDX(
+        withTypescript({
+            pageExtensions: ['tsx', 'md', 'mdx'],
+            target: 'serverless',
+        }),
+    ),
+);
