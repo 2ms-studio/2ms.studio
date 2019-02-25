@@ -14,16 +14,17 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@babel/core": "^7.0.0-0",
-        "@mdx-js/mdx": "^0.15.0",
+        "@babel/core": "^7.3.3",
+        "@mdx-js/mdx": "^0.17.5",
         "@zeit/next-mdx": "^1.2.0",
         "@zeit/next-typescript": "^1.1.1",
         "add": "^2.0.6",
         "ascrape": "^0.2.0",
-        "next": "^8.0.1",
-        "react": "^16.8.2",
-        "react-dom": "^16.8.2",
-        "webpack": "^4.4.0",
+        "next": "^8.0.3",
+        "raf-throttle": "^2.0.3",
+        "react": "^16.8.3",
+        "react-dom": "^16.8.3",
+        "webpack": "^4.29.5",
         "yarn": "^1.13.0"
     },
     "devDependencies": {
