@@ -1,10 +1,10 @@
 const withTypescript = require('@zeit/next-typescript');
-const withPreact = require('@zeit/next-preact');
 const withMDX = require('@zeit/next-mdx')({
     extension: /\.(md|mdx)$/,
 });
+const withSize = require('next-size');
 
-module.exports = withPreact(
+module.exports = withSize(
     withMDX(
         withTypescript({
             pageExtensions: ['tsx', 'md', 'mdx'],
