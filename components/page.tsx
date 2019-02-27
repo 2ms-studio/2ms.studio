@@ -1,5 +1,4 @@
-import Head from './head';
-import Canvas from './Canvas';
+import Head from './Head';
 
 export interface Props {
     align?: string;
@@ -15,7 +14,6 @@ const Page: React.FC<Props> = ({
     <div>
         <Head />
         {children}
-        <Canvas />
         <style jsx>{`
             div {
                 min-height: 100vh;

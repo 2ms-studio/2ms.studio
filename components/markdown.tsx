@@ -1,8 +1,4 @@
-export interface Props {
-    children: JSX.Element[] | JSX.Element;
-}
-
-const Markdown = ({ children = [] }: Props) => (
+const Markdown: React.FC = ({ children }) => (
     <div className="markdown">
         {children}
         <style jsx global>{`
