@@ -1,4 +1,4 @@
-import Head from './head';
+import Head from './Head';
 
 export interface Props {
     align?: string;
@@ -22,6 +22,7 @@ const Page: React.FC<Props> = ({
                 align-items: center;
                 justify-content: ${align};
                 padding: 2em;
+                position: relative;
             }
         `}</style>
     </div>

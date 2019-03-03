@@ -28,7 +28,7 @@ const Headd: React.FC<Props> = ({
                 html {
                     line-height: 1.4;
                     -webkit-text-size-adjust: 100%;
-                    height: 100%;
+                    min-height: 100%;
                     box-sizing: border-box;
                 }
                 *,
@@ -43,6 +43,7 @@ const Headd: React.FC<Props> = ({
                 body {
                     font-family: 'Times New Roman', serif;
                     height: 100%;
+                    position: relative;
                 }
                 details,
                 main {

@@ -1,9 +1,9 @@
-import Page from '../components/page';
-import Head from '../components/head';
-import Markdown from '../components/markdown';
+import Page from '../components/Page';
+import Head from '../components/Head';
+import Markdown from '../components/Markdown';
 import BioContent from '../content/bio.md';
 
-const Bio = () => (
+const Bio: React.FC = () => (
     <Page>
         <Head title="Dan Tombs’ Bio" description="Dan Tombs Bio, 2018" />
         <Markdown>
