@@ -8,7 +8,6 @@ module.exports = withSize(
     withMDX(
         withTypescript({
             pageExtensions: ['tsx', 'md', 'mdx'],
-            target: 'serverless',
         }),
     ),
 );

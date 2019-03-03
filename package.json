@@ -7,15 +7,16 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "next",
         "build": "next build",
+        "export": "yarn build && next export -o dist",
         "start": "next start",
-        "now-build": "next build"
+        "now-build": "yarn export"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@babel/core": "^7.3.3",
-        "@mdx-js/mdx": "^0.17.5",
+        "@babel/core": "^7.3.4",
+        "@mdx-js/mdx": "^0.20.1",
         "@zeit/next-mdx": "^1.2.0",
         "@zeit/next-typescript": "^1.1.1",
         "add": "^2.0.6",
@@ -24,7 +25,7 @@
         "raf-throttle": "^2.0.3",
         "react": "^16.8.3",
         "react-dom": "^16.8.3",
-        "webpack": "^4.29.5",
+        "webpack": "^4.29.6",
         "yarn": "^1.13.0"
     },
     "devDependencies": {
