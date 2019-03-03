@@ -8,7 +8,7 @@ export default class App extends NextApp {
 
         return (
             <>
-                <Canvas />
+                {/* <Canvas /> */}
                 <Container>
                     <Component {...pageProps} />
                 </Container>

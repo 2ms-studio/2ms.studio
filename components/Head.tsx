@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import meta from '../dan-edits-these/meta.json';
 
 export interface Props {
     title?: string;
@@ -8,7 +9,7 @@ export interface Props {
 
 const Headd: React.FC<Props> = ({
     title = '',
-    description = '2MS.studio',
+    description = meta.description.default,
     children = [],
 } = {}) => (
     <>
