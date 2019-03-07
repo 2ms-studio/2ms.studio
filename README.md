@@ -10,4 +10,4 @@ $ cd 2ms.studio
 $ make dev
 ```
 
-That should be it.
+That should be it 🤞
