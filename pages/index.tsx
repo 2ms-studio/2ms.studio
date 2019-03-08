@@ -6,7 +6,7 @@ import Page from '../components/Page';
 const random = (min: number = random(-10, 0), max: number = random(0, 10)) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
 
-const trans = 0.4;
+const trans = 0.5;
 const red = `rgba(255, 0, 0, ${trans})`;
 const green = `rgba(0, 255, 0, ${trans})`;
 const blue = `rgba(0, 0, 255, ${trans})`;
@@ -41,7 +41,7 @@ export default class Home extends Component {
                 <div
                     className="sites"
                     dangerouslySetInnerHTML={{
-                        __html: pages[2],
+                        __html: pages[random(0, pages.length - 1)],
                     }}
                 />
                 <style jsx global>{`
@@ -90,15 +90,18 @@ export default class Home extends Component {
                             width: 0%;
                         }
                     }
+
+                    body {
+                        background-color: black;
+                    }
                     .sites {
                         position: relative;
-                        left: -20px;
+                        left: 00px;
                         top: -100px;
                         width: 100%;
                         z-index: -1;
                         pointer-events: none;
-                        -webkit-font-smoothing: none;
-                        color: rgba(255, 255, 255, 0.3);
+                        color: rgba(0, 0, 0, 0.2);
                         animation-duration: 1ms, 500s;
                         animation-name: shadow, resize;
                         animation-iteration-count: infinite, 1;
@@ -111,15 +114,19 @@ export default class Home extends Component {
                             ${random()}px ${random()}px 0 ${blue},
                             ${random()}px ${random()}px 0 ${yellow};
                         transform-origin: top left;
-                        transform: rotate(1deg);
+                         {
+                            /* transform: rotate(1deg); */
+                        }
                     }
 
                     .sites * {
                         font-weight: normal !important;
-                        font-family: serif !important;
-                        font-size: 40px !important;
-                        line-height: 1.5 !important;
-                        font-style: italic;
+                        font-family: 'Helvetica Neue', Helvetica, Arial,
+                            sans-serif !important;
+                        font-size: 60px !important;
+                        line-height: 50px !important;
+                        letter-spacing: -10px;
+                        word-spacing: 0.6em;
                     }
                 `}</style>
             </Page>
