@@ -1,5 +1,5 @@
-import Page from '../components/Page';
 import Head from '../components/Head';
+import Page from '../components/Page';
 
 const ShowReel: React.FC = () => (
     <Page align="center">

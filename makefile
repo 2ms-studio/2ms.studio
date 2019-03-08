@@ -1,7 +1,12 @@
 .PHONY: dev
-dev: clear check-nvm install
+dev: clear check-nvm install scrape
 	$(call log,Starting Next.js)
 	@bash -l -c 'nvm exec --silent next'
+
+.PHONY: scrape
+scrape:
+	$(call log,Scraping URLs)
+	@node ./lib/scrape
 
 # helpers ############################################
 

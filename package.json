@@ -5,26 +5,24 @@
     "main": "pages/index.tsx",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "next",
-        "build": "next build",
-        "export": "yarn build && next export -o dist",
-        "start": "next start",
-        "now-build": "yarn export"
+        "now-build": "make scrape && next build && next export -o dist"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "@babel/core": "^7.3.4",
-        "@mdx-js/mdx": "^0.20.1",
+        "@mdx-js/mdx": "^0.20.3",
         "@zeit/next-mdx": "^1.2.0",
         "@zeit/next-typescript": "^1.1.1",
         "add": "^2.0.6",
         "ascrape": "^0.2.0",
+        "mkdirp": "^0.5.1",
         "next": "^8.0.3",
         "raf-throttle": "^2.0.3",
-        "react": "^16.8.3",
-        "react-dom": "^16.8.3",
+        "react": "^16.8.4",
+        "react-dom": "^16.8.4",
+        "react-pose": "^4.0.8",
         "webpack": "^4.29.6",
         "yarn": "^1.13.0"
     },

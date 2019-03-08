@@ -15,7 +15,7 @@ const Page: React.FC<Props> = ({
         <Head />
         {children}
         <style jsx>{`
-            div {
+            {/* div {
                 min-height: 100vh;
                 display: flex;
                 flex-direction: ${direction};
@@ -23,7 +23,7 @@ const Page: React.FC<Props> = ({
                 justify-content: ${align};
                 padding: 2em;
                 position: relative;
-            }
+            } */}
         `}</style>
     </div>
 );
