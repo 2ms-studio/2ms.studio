@@ -91,9 +91,9 @@ export default class Home extends Component {
                         }
                     }
                     .sites {
-                        position: absolute;
-                        top: 0;
-                        left: -30px;
+                        position: relative;
+                        left: -20px;
+                        top: -140px;
                         width: 100%;
                         z-index: -1;
                         pointer-events: none;
