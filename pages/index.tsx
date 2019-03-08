@@ -98,7 +98,7 @@ export default class Home extends Component {
                         position: absolute;
                         left: 00px;
                         top: 00px;
-                        max-width: 5ch;
+                        max-width: 100ch;
                         z-index: -1;
                         pointer-events: none;
                         color: rgba(255, 255, 255, 0.6);
@@ -122,7 +122,7 @@ export default class Home extends Component {
                         font-family: 'Helvetica Neue', Helvetica, Arial,
                             sans-serif !important;
                         font-size: 60px !important;
-                        line-height: 70px !important;
+                        line-height: 32px !important;
                         letter-spacing: -3px;
                         word-spacing: 0.2em;
                     }
