@@ -4,7 +4,7 @@ dev: clear check-nvm install scrape
 	@bash -l -c 'nvm exec --silent next'
 
 .PHONY: scrape
-scrape: install
+scrape:
 	$(call log,Scraping URLs)
 	@node ./lib/scrape
 
