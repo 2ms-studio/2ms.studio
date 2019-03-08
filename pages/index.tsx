@@ -6,7 +6,7 @@ import Page from '../components/Page';
 const random = (min: number = random(-10, 0), max: number = random(0, 10)) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
 
-const trans = 0.5;
+const trans = 0.8;
 const red = `rgba(255, 0, 0, ${trans})`;
 const green = `rgba(0, 255, 0, ${trans})`;
 const blue = `rgba(0, 0, 255, ${trans})`;
@@ -101,7 +101,7 @@ export default class Home extends Component {
                         width: 100%;
                         z-index: -1;
                         pointer-events: none;
-                        color: rgba(0, 0, 0, 0.2);
+                        color: rgba(255, 255, 255, 1);
                         animation-duration: 1ms, 500s;
                         animation-name: shadow, resize;
                         animation-iteration-count: infinite, 1;
@@ -125,7 +125,7 @@ export default class Home extends Component {
                             sans-serif !important;
                         font-size: 60px !important;
                         line-height: 50px !important;
-                        letter-spacing: -10px;
+                        letter-spacing: -3px;
                         word-spacing: 0.6em;
                     }
                 `}</style>
