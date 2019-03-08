@@ -3,7 +3,7 @@ import { Component } from 'react';
 import pages from '../.scraped/urls.json';
 import Page from '../components/Page';
 
-const random = (min: number = random(-30, 0), max: number = random(0, 30)) =>
+const random = (min: number = -40, max: number = 40) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
 
 const trans = 0.6;
@@ -98,12 +98,12 @@ export default class Home extends Component {
                         position: absolute;
                         left: 00px;
                         top: 00px;
-                        max-width: 100ch;
+                        max-width: 5ch;
                         z-index: -1;
                         pointer-events: none;
-                        color: rgba(255, 255, 255, 1);
-                        animation-duration: 10000ms, 500s;
-                        animation-name: shadow, resize;
+                        color: rgba(255, 255, 255, 0.6);
+                        animation-duration: 30s, 500s;
+                        animation-name: shadow;
                         animation-iteration-count: infinite, 1;
                         animation-direction: alternate, normal;
                         animation-timing-function: ease-out, linear;
@@ -122,9 +122,9 @@ export default class Home extends Component {
                         font-family: 'Helvetica Neue', Helvetica, Arial,
                             sans-serif !important;
                         font-size: 60px !important;
-                        line-height: 50px !important;
+                        line-height: 70px !important;
                         letter-spacing: -3px;
-                        word-spacing: 0.5em;
+                        word-spacing: 0.2em;
                     }
                 `}</style>
             </Page>
