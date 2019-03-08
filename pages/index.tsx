@@ -3,10 +3,10 @@ import { Component } from 'react';
 import pages from '../.scraped/urls.json';
 import Page from '../components/Page';
 
-const random = (min: number = random(-15, 0), max: number = random(0, 15)) =>
+const random = (min: number = random(-30, 0), max: number = random(0, 30)) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
 
-const trans = 0.8;
+const trans = 0.6;
 const red = `rgba(255, 0, 0, ${trans})`;
 const green = `rgba(0, 255, 0, ${trans})`;
 const blue = `rgba(0, 0, 255, ${trans})`;
@@ -47,47 +47,47 @@ export default class Home extends Component {
                 <style jsx global>{`
                     @keyframes shadow {
                         0% {
-                            text-shadow: ${random()}px ${random()}px 0 ${red},
-                                ${random()}px ${random()}px 0 ${green},
-                                ${random()}px ${random()}px 0 ${blue},
-                                ${random()}px ${random()}px 0 ${yellow};
+                            text-shadow: ${random()}px 0px 0 ${red},
+                                ${random()}px 0px 0 ${green},
+                                ${random()}px 0px 0 ${blue},
+                                ${random()}px 0px 0 ${yellow};
                         }
 
                         10% {
-                            text-shadow: ${random()}px ${random()}px 0 ${red},
-                                ${random()}px ${random()}px 0 ${green},
-                                ${random()}px ${random()}px 0 ${blue},
-                                ${random()}px ${random()}px 0 ${yellow};
+                            text-shadow: ${random()}px 0px 0 ${red},
+                                ${random()}px 0px 0 ${green},
+                                ${random()}px 0px 0 ${blue},
+                                ${random()}px 0px 0 ${yellow};
                         }
 
                         50% {
-                            text-shadow: ${random()}px ${random()}px 0 ${red},
-                                ${random()}px ${random()}px 0 ${green},
-                                ${random()}px ${random()}px 0 ${blue},
-                                ${random()}px ${random()}px 0 ${yellow};
+                            text-shadow: ${random()}px 0px 0 ${red},
+                                ${random()}px 0px 0 ${green},
+                                ${random()}px 0px 0 ${blue},
+                                ${random()}px 0px 0 ${yellow};
                         }
 
                         70% {
-                            text-shadow: ${random()}px ${random()}px 0 ${red},
-                                ${random()}px ${random()}px 0 ${green},
-                                ${random()}px ${random()}px 0 ${blue},
-                                ${random()}px ${random()}px 0 ${yellow};
+                            text-shadow: ${random()}px 0px 0 ${red},
+                                ${random()}px 0px 0 ${green},
+                                ${random()}px 0px 0 ${blue},
+                                ${random()}px 0px 0 ${yellow};
                         }
 
                         100% {
-                            text-shadow: ${random()}px ${random()}px 0 ${red},
-                                ${random()}px ${random()}px 0 ${green},
-                                ${random()}px ${random()}px 0 ${blue},
-                                ${random()}px ${random()}px 0 ${yellow};
+                            text-shadow: ${random()}px 0px 0 ${red},
+                                ${random()}px 0px 0 ${green},
+                                ${random()}px 0px 0 ${blue},
+                                ${random()}px 0px 0 ${yellow};
                         }
                     }
                     @keyframes resize {
                         from {
-                            width: 100%;
+                            max-width: 100ch;
                         }
 
                         to {
-                            width: 0%;
+                            max-width: 0%;
                         }
                     }
 
@@ -98,21 +98,21 @@ export default class Home extends Component {
                         position: absolute;
                         left: 00px;
                         top: 00px;
-                        width: 100%;
+                        max-width: 100ch;
                         z-index: -1;
                         pointer-events: none;
                         color: rgba(255, 255, 255, 1);
-                        animation-duration: 1ms, 500s;
+                        animation-duration: 10000ms, 500s;
                         animation-name: shadow, resize;
                         animation-iteration-count: infinite, 1;
                         animation-direction: alternate, normal;
                         animation-timing-function: ease-out, linear;
                         animation-fill-mode: forwards;
                         animation-delay: 0s;
-                        text-shadow: ${random()}px ${random()}px 0 ${red},
-                            ${random()}px ${random()}px 0 ${green},
-                            ${random()}px ${random()}px 0 ${blue},
-                            ${random()}px ${random()}px 0 ${yellow};
+                        text-shadow: ${random()}px 0px 0 ${red},
+                            ${random()}px 0px 0 ${green},
+                            ${random()}px 0px 0 ${blue},
+                            ${random()}px 0px 0 ${yellow};
 
                         -webkit-font-smoothing: antialiased;
                     }
@@ -123,7 +123,7 @@ export default class Home extends Component {
                             sans-serif !important;
                         font-size: 60px !important;
                         line-height: 50px !important;
-                        letter-spacing: -4px;
+                        letter-spacing: -3px;
                         word-spacing: 0.5em;
                     }
                 `}</style>
