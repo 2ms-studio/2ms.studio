@@ -1,5 +1,5 @@
-import React from 'react';
 import NextApp, { Container } from 'next/app';
+import React from 'react';
 import Canvas from '../components/Canvas';
 
 export default class App extends NextApp {
@@ -8,7 +8,7 @@ export default class App extends NextApp {
 
         return (
             <>
-                {/* <Canvas /> */}
+                <Canvas />
                 <Container>
                     <Component {...pageProps} />
                 </Container>

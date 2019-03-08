@@ -1,6 +1,6 @@
-import Page from '../components/Page';
 import Head from '../components/Head';
 import Markdown from '../components/Markdown';
+import Page from '../components/Page';
 import BioContent from '../dan-edits-these/bio.md';
 import meta from '../dan-edits-these/meta.json';
 
@@ -10,17 +10,17 @@ const Bio: React.FC = () => (
         <Markdown>
             <BioContent />
         </Markdown>
-        <style jsx>{`
+        {/* <style jsx>{`
             div {
-                {/* min-height: 100vh;
+                min-height: 100vh;
                 display: flex;
                 flex-direction: ${direction};
                 align-items: center;
                 justify-content: ${align};
                 padding: 2em;
-                position: relative; */}
+                position: relative;
             }
-        `}</style>
+        `}</style> */}
     </Page>
 );
 

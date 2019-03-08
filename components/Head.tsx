@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import NextHead from 'next/head';
 import meta from '../dan-edits-these/meta.json';
 
 export interface Props {
@@ -7,13 +7,13 @@ export interface Props {
     children?: JSX.Element[] | JSX.Element;
 }
 
-const Headd: React.FC<Props> = ({
+const Head: React.FC<Props> = ({
     title = '',
     description = meta.description.default,
     children = [],
 } = {}) => (
     <>
-        <Head>
+        <NextHead>
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta
                 name="viewport"
@@ -23,13 +23,13 @@ const Headd: React.FC<Props> = ({
             <meta name="description" content={description} />
             <title>{['2MS', title].filter(Boolean).join(' // ')}</title>
             {children}
-        </Head>
+        </NextHead>
         <style jsx global>
             {`
                 html {
                     line-height: 1.4;
                     -webkit-text-size-adjust: 100%;
-                    min-height: 100%;
+                    height: 100%;
                     box-sizing: border-box;
                 }
                 *,
@@ -43,7 +43,7 @@ const Headd: React.FC<Props> = ({
                 }
                 body {
                     font-family: 'Times New Roman', serif;
-                    height: 100%;
+                    min-height: 100%;
                     position: relative;
                 }
                 details,
@@ -83,4 +83,4 @@ const Headd: React.FC<Props> = ({
     </>
 );
 
-export default Headd;
+export default Head;

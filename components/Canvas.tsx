@@ -1,4 +1,4 @@
-import { PureComponent, createRef } from 'react';
+import { createRef, PureComponent } from 'react';
 
 type Props = {};
 type State = {
