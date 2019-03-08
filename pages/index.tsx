@@ -93,7 +93,7 @@ export default class Home extends Component {
                     .sites {
                         position: relative;
                         left: -20px;
-                        top: -140px;
+                        top: -100px;
                         width: 100%;
                         z-index: -1;
                         pointer-events: none;
