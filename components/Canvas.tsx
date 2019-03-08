@@ -39,7 +39,7 @@ export default class Canvas extends PureComponent<Props, State> {
 
     handleMouseMove({ clientX, clientY }: MouseEvent) {
         if (this.x && this.y) {
-            this.draw(clientX + window.scrollX, clientY + window.scrollY);
+            this.draw(clientX, clientY);
         } else {
             this.x = clientX;
             this.y = clientY;
@@ -63,8 +63,8 @@ export default class Canvas extends PureComponent<Props, State> {
 
     componentDidMount() {
         this.setState({
-            width: document.documentElement.clientWidth,
-            // height: document.documentElement.clientHeight,
+            width: window.innerWidth,
+            height: window.innerHeight,
         });
         document.addEventListener('mousemove', this.handleMouseMove, {
             passive: true,
@@ -89,7 +89,7 @@ export default class Canvas extends PureComponent<Props, State> {
                 />
                 <style jsx>{`
                     div {
-                        position: absolute;
+                        position: fixed;
                         top: 0;
                         left: 0;
                         bottom: 0;
