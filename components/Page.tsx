@@ -1,20 +1,20 @@
-import Head from './Head';
+import Head from './Head'
 
 export interface Props {
-    align?: string;
-    direction?: string;
-    children?: JSX.Element[] | JSX.Element;
+	align?: string
+	direction?: string
+	children?: React.ReactNode
 }
 
 const Page: React.FC<Props> = ({
-    align = 'flex-start',
-    direction = 'column',
-    children,
-}) => (
-    <div>
-        <Head />
-        {children}
-        <style jsx>{`
+	align = 'flex-start',
+	direction = 'column',
+	children,
+} = {}) => (
+	<div>
+		<Head />
+		{children}
+		<style jsx>{`
             {/* div {
                 min-height: 100vh;
                 display: flex;
@@ -25,6 +25,6 @@ const Page: React.FC<Props> = ({
                 position: relative;
             } */}
         `}</style>
-    </div>
-);
-export default Page;
+	</div>
+)
+export default Page
