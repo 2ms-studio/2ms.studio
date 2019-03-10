@@ -21,13 +21,9 @@ const Site: React.FC<Props> = ({ content, color }) => {
 		const absMin = Math.abs(min)
 		const freq = (absMin + max) / 2
 
-		scrolling = window.setTimeout(function() {
-			setDuration(1000)
-			setX(0)
-		}, 60)
+		window.clearTimeout(scrolling)
 
 		scrolling = window.requestAnimationFrame(() => {
-			window.clearTimeout(scrolling)
 			setDuration(250)
 			setX(
 				Math.round(
@@ -36,6 +32,11 @@ const Site: React.FC<Props> = ({ content, color }) => {
 				),
 			)
 		})
+
+		scrolling = window.setTimeout(function() {
+			setDuration(1000)
+			setX(0)
+		}, 60)
 	}
 
 	useEffect(() => {
@@ -79,6 +80,7 @@ const Site: React.FC<Props> = ({ content, color }) => {
 					transition-timing-function: linear;
 					opacity: ${color === 'main' ? 1 : 0.65};
 					max-width: 80ch;
+					will-change: transform;
 				}
 
 				div,
