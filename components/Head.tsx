@@ -1,5 +1,5 @@
-import NextHead from 'next/head';
-import meta from '../dan-edits-these/meta.json';
+import NextHead from 'next/head'
+import meta from '../dan-edits-these/meta.json'
 
 export interface Props {
 	title?: string
