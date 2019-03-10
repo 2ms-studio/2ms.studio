@@ -35,15 +35,15 @@ const Home: React.FC<{}> = () => (
 		`}</style>
 
 		<div>
-			{['red', 'lime', 'blue', 'white'].map(colour => (
+			{['red', 'lime', 'blue', 'main'].map(colour => (
 				<ScrapedSite color={colour} content={pages[2]} key={colour} />
 			))}
 		</div>
 		<style jsx>{`
 			div {
 				position: relative;
-				z-index: -1;
 				pointer-events: none;
+				z-index: 1;
 			}
 		`}</style>
 		<style jsx global>{`

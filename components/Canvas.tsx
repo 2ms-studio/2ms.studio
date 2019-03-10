@@ -1,4 +1,6 @@
+import throttle from 'just-throttle'
 import { useEffect, useRef, useState } from 'react'
+import random from '../lib/random'
 
 const Canvas: React.FunctionComponent = () => {
 	let x = 0
@@ -13,13 +15,18 @@ const Canvas: React.FunctionComponent = () => {
 
 			if (ctx) {
 				window.requestAnimationFrame(() => {
-					ctx.strokeStyle = '#000'
+					ctx.strokeStyle = `hsla(${random(0, 255)}, 100%, 50%, 0.5)`
+					ctx.beginPath()
+					ctx.moveTo(-500, 100)
+					ctx.lineTo(newX, newY)
+					ctx.stroke()
+					ctx.strokeStyle = `white`
 					ctx.beginPath()
 					ctx.moveTo(x, y)
 					ctx.lineTo(newX, newY)
+					ctx.stroke()
 					x = newX
 					y = newY
-					ctx.stroke()
 				})
 			}
 		}
@@ -34,12 +41,23 @@ const Canvas: React.FunctionComponent = () => {
 	}
 
 	useEffect(() => {
-		document.addEventListener('mousemove', handleMouseMove, {
-			passive: true,
-		})
+		document.addEventListener(
+			'mousemove',
+			throttle(handleMouseMove, 75, true),
+			{
+				passive: true,
+			},
+		)
 
 		setWidth(window.innerWidth)
 		setHeight(window.innerHeight)
+		if (ref && ref.current) {
+			const ctx = ref.current.getContext('2d')
+
+			if (ctx) {
+				ctx.translate(0.5, 0.5)
+			}
+		}
 
 		return () => {
 			document.removeEventListener('mousemove', handleMouseMove)
@@ -58,6 +76,7 @@ const Canvas: React.FunctionComponent = () => {
 					right: 0;
 					pointer-events: none;
 					overflow: hidden;
+					z-index: 5;
 				}
 			`}</style>
 		</div>

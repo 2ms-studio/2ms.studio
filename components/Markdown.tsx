@@ -3,7 +3,12 @@ const Markdown: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 		{children}
 		<style jsx global>{`
 			.markdown {
-				max-width: 60ch;
+				max-width: 80ch;
+				position: relative;
+				z-index: 10;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 2em;
 			}
 			.markdown p {
 				text-indent: 2ch;

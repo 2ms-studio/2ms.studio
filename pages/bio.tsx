@@ -10,17 +10,6 @@ const Bio: React.FC = () => (
 		<Markdown>
 			<BioContent />
 		</Markdown>
-		{/* <style jsx>{`
-            div {
-                min-height: 100vh;
-                display: flex;
-                flex-direction: ${direction};
-                align-items: center;
-                justify-content: ${align};
-                padding: 2em;
-                position: relative;
-            }
-        `}</style> */}
 	</Page>
 )
 

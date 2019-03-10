@@ -1,5 +1,5 @@
-import NextHead from 'next/head'
-import meta from '../dan-edits-these/meta.json'
+import NextHead from 'next/head';
+import meta from '../dan-edits-these/meta.json';
 
 export interface Props {
 	title?: string
@@ -45,6 +45,7 @@ const Head: React.FC<Props> = ({
 					font-family: 'Times New Roman', serif;
 					min-height: 100%;
 					position: relative;
+					overflow-x: hidden;
 				}
 				details,
 				main {

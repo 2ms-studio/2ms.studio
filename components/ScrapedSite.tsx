@@ -6,74 +6,90 @@ export interface Props {
 	color: string
 }
 
+const peak = 20
+
 const Site: React.FC<Props> = ({ content, color }) => {
-	const [animation, setAnimation] = useState({
-		duration: 0,
-		first: 0,
-		second: 0,
-		third: 0,
-		fourth: 0,
-		fifth: 0,
-	})
+	let min = 0
+	let max = 0
+	let offset = 0
+	let scrolling: number
+
+	const [x, setX] = useState(0)
+	const [duration, setDuration] = useState(0)
+
+	const handleScroll = () => {
+		const absMin = Math.abs(min)
+		const freq = (absMin + max) / 2
+
+		scrolling = window.setTimeout(function() {
+			setDuration(1000)
+			setX(0)
+		}, 60)
+
+		scrolling = window.requestAnimationFrame(() => {
+			window.clearTimeout(scrolling)
+			setDuration(250)
+			setX(
+				Math.round(
+					freq * Math.sin(window.scrollY * 0.01 + offset) +
+						(absMin - freq),
+				),
+			)
+		})
+	}
 
 	useEffect(() => {
-		if (color !== 'white') {
-			setAnimation({
-				duration: random(25, 40),
-				first: random(-40, 40),
-				second: random(-40, 40),
-				third: random(-40, 40),
-				fourth: random(-40, 40),
-				fifth: random(-40, 40),
+		if (color !== 'main') {
+			min = random(-peak, peak)
+			max = random(-peak, peak)
+			offset = random(0, 5)
+		}
+	}, [])
+
+	useEffect(() => {
+		if (color !== 'main') {
+			window.addEventListener('scroll', handleScroll, {
+				passive: true,
 			})
+
+			return () => {
+				window.removeEventListener('scroll', handleScroll)
+			}
 		}
 	}, [])
 
 	return (
 		<>
-			<div dangerouslySetInnerHTML={{ __html: content }} />
+			<div
+				dangerouslySetInnerHTML={{ __html: content }}
+				style={{
+					transform: `translateX(${x}px)`,
+					transitionDuration: `${duration}ms`,
+				}}
+			/>
 			<style jsx>{`
-				@keyframes move {
-					0% {
-						transform: translateX(${animation.first}px);
-					}
-					10% {
-						transform: translateX(${animation.second}px);
-					}
-					50% {
-						transform: translateX(${animation.third}px);
-					}
-					80% {
-						transform: translateX(${animation.fourth}px);
-					}
-					100% {
-						transform: translateX(${animation.fifth}px);
-					}
-				}
 				div {
 					position: absolute;
 					left: 0;
 					top: 0;
 					right: 0;
-					color: ${color};
+					color: ${color === 'main' ? '#fff' : color}};
 					-webkit-font-smoothing: antialiased;
-					animation-name: move;
-					animation-duration: ${animation.duration}s;
-					animation-iteration-count: infinite;
-					animation-direction: alternate;
-					animation-timing-function: ease-in-out;
-					animation-fill-mode: forwards;
-					opacity: ${color === 'white' ? 0.7 : 0.4};
+					transition-property: transform;
+					transition-timing-function: linear;
+					opacity: ${color === 'main' ? 1 : 0.65};
 					max-width: 80ch;
 				}
 
+				div,
 				div :global(*) {
-					font-weight: normal !important;
+					font-weight: bold !important;
 					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 					font-size: 60px !important;
-					line-height: 0.55 !important;
+					line-height: 0.9 !important;
 					letter-spacing: -3px;
 					word-spacing: 0.3em;
+					text-transform: uppercase;
 				}
 			`}</style>
 		</>
