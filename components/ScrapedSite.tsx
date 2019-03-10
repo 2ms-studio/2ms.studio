@@ -6,7 +6,7 @@ export interface Props {
 	color: string
 }
 
-const peak = 20
+const peak = 50
 
 const Site: React.FC<Props> = ({ content, color }) => {
 	let min = 0
