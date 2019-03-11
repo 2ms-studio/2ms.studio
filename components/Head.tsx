@@ -50,6 +50,7 @@ const Head: React.FC<Props> = ({
 					min-height: 100%;
 					position: relative;
 					overflow-x: hidden;
+					background-color: black;
 				}
 				details,
 				main {

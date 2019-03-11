@@ -1,10 +1,6 @@
 import NavLink from './NavLink'
 
-export interface Props {
-	white?: boolean
-}
-
-const Nav: React.FC<Props> = ({ white }) => (
+const Nav: React.FC = () => (
 	<nav>
 		<ul>
 			<li>
