@@ -1,5 +1,7 @@
 # Dan Tombs Bio, 2018
 
+## An interview with Ralph Moore
+
 _Visual artist, creator and curator_, Dan Tombs has a knack of being in the right place at the right time.
 
 As well as creating single and album sleeve artwork for the likes of Gold Panda, XL Recordings, Border Community and NOTOWN, he’s spent the past decade working as a solo artist and also a key collaborator for the likes of The Charlatans, James Holden, Gold Panda, Blanck Mass (“the work we did is an absolute horror show!“) and arguably his most fruitful collaboration alongside Jon Hopkins, now one of the biggest artists in the contemporary electronic space.

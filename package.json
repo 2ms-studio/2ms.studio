@@ -1,34 +1,44 @@
 {
-    "name": "dantombs.net",
-    "version": "2.0.0",
-    "description": "",
-    "main": "pages/index.tsx",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "now-build": "make scrape && next build && next export -o dist"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@babel/core": "^7.3.4",
-        "@mdx-js/mdx": "^0.20.3",
-        "@zeit/next-mdx": "^1.2.0",
-        "@zeit/next-typescript": "^1.1.1",
-        "add": "^2.0.6",
-        "ascrape": "^0.2.0",
-        "mkdirp": "^0.5.1",
-        "next": "^8.0.3",
-        "raf-throttle": "^2.0.3",
-        "react": "^16.8.4",
-        "react-dom": "^16.8.4",
-        "react-pose": "^4.0.8",
-        "webpack": "^4.29.6",
-        "yarn": "^1.13.0"
-    },
-    "devDependencies": {
-        "@types/next": "^8.0.1",
-        "@types/styled-jsx": "^2.2.8",
-        "next-size": "^2.0.2"
-    }
+	"name": "dantombs.net",
+	"version": "2.0.0",
+	"description": "",
+	"main": "pages/index.tsx",
+	"scripts": {
+		"lint": "eslint . --ext .js --ext .ts --ext .tsx",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"now-build": "yarn lint && make scrape && next build && next export -o dist"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@babel/core": "^7.3.4",
+		"@mdx-js/mdx": "^0.20.3",
+		"@zeit/next-mdx": "^1.2.0",
+		"@zeit/next-typescript": "^1.1.1",
+		"add": "^2.0.6",
+		"ascrape": "^0.2.0",
+		"just-throttle": "^1.1.0",
+		"mkdirp": "^0.5.1",
+		"next": "^8.0.3",
+		"react": "^16.8.4",
+		"react-dom": "^16.8.4",
+		"react-player": "^1.9.3",
+		"react-pose": "^4.0.8",
+		"webpack": "^4.29.6",
+		"yarn": "^1.13.0"
+	},
+	"devDependencies": {
+		"@types/next": "^8.0.1",
+		"@types/styled-jsx": "^2.2.8",
+		"@typescript-eslint/eslint-plugin": "^1.4.2",
+		"@typescript-eslint/parser": "^1.4.2",
+		"eslint": "^5.15.1",
+		"eslint-config-prettier": "^4.1.0",
+		"eslint-plugin-prettier": "^3.0.1",
+		"eslint-plugin-react": "^7.12.4",
+		"next-size": "^2.0.2",
+		"prettier": "^1.16.4",
+		"typescript": "^3.3.3333"
+	}
 }
