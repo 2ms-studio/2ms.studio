@@ -15,7 +15,7 @@ const Canvas: React.FunctionComponent = () => {
 
 			if (ctx) {
 				window.requestAnimationFrame(() => {
-					ctx.strokeStyle = `hsla(${random(0, 255)}, 100%, 50%, 0.5)`
+					ctx.strokeStyle = `hsla(${random(0, 255)}, 100%, 50%, 0.6)`
 					ctx.beginPath()
 					ctx.moveTo(-500, 100)
 					ctx.lineTo(newX, newY)

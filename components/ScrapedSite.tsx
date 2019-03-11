@@ -6,7 +6,7 @@ export interface Props {
 	color: string
 }
 
-const peak = 20
+const peak = 15
 
 const Site: React.FC<Props> = ({ content, color }) => {
 	let min = 0
@@ -15,7 +15,6 @@ const Site: React.FC<Props> = ({ content, color }) => {
 	let scrolling: number
 
 	const [x, setX] = useState(0)
-	const [duration, setDuration] = useState(0)
 
 	const handleScroll = () => {
 		const absMin = Math.abs(min)
@@ -24,7 +23,6 @@ const Site: React.FC<Props> = ({ content, color }) => {
 		window.clearTimeout(scrolling)
 
 		scrolling = window.requestAnimationFrame(() => {
-			setDuration(250)
 			setX(
 				Math.round(
 					freq * Math.sin(window.scrollY * 0.01 + offset) +
@@ -34,7 +32,6 @@ const Site: React.FC<Props> = ({ content, color }) => {
 		})
 
 		scrolling = window.setTimeout(function() {
-			setDuration(500)
 			setX(0)
 		}, 60)
 	}
@@ -65,7 +62,6 @@ const Site: React.FC<Props> = ({ content, color }) => {
 				dangerouslySetInnerHTML={{ __html: content }}
 				style={{
 					transform: `translateX(${x}px)`,
-					transitionDuration: `${duration}ms`,
 				}}
 			/>
 			<style jsx>{`
@@ -81,6 +77,7 @@ const Site: React.FC<Props> = ({ content, color }) => {
 						: 'none'}};
 					-webkit-font-smoothing: antialiased;
 					transition-property: transform;
+					transform-duration: 250ms;
 					transition-timing-function: linear;
 					opacity: ${color === 'main' ? 1 : 0.7};
 					will-change: transform;
