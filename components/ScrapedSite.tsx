@@ -6,7 +6,7 @@ export interface Props {
 	color: string
 }
 
-const peak = 50
+const peak = 20
 
 const Site: React.FC<Props> = ({ content, color }) => {
 	let min = 0
@@ -78,7 +78,7 @@ const Site: React.FC<Props> = ({ content, color }) => {
 					-webkit-font-smoothing: antialiased;
 					transition-property: transform;
 					transition-timing-function: linear;
-					opacity: ${color === 'main' ? 1 : 0.65};
+					opacity: ${color === 'main' ? 0.8 : 0.5};
 					max-width: 80ch;
 					will-change: transform;
 				}

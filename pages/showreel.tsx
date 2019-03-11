@@ -2,7 +2,7 @@ import Head from '../components/Head'
 import Page from '../components/Page'
 
 const ShowReel: React.FC = () => (
-	<Page align="center">
+	<Page>
 		<Head title="Dan Tombs Showreel">
 			{/* hide the page from search engine results */}
 			<meta name="robots" content="noindex" />

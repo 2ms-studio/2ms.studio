@@ -29,6 +29,7 @@ const Head: React.FC<Props> = ({
 				html {
 					line-height: 1.4;
 					-webkit-text-size-adjust: 100%;
+					min-height: 100%;
 					height: 100%;
 					box-sizing: border-box;
 				}

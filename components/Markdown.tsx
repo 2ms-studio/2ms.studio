@@ -9,6 +9,8 @@ const Markdown: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 				margin-left: auto;
 				margin-right: auto;
 				padding: 2em;
+				color: white;
+				mix-blend-mode: difference;
 			}
 			.markdown p {
 				text-indent: 2ch;

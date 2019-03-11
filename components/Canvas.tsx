@@ -32,25 +32,35 @@ const Canvas: React.FunctionComponent = () => {
 		}
 	}
 
-	const handleMouseMove = ({ clientX, clientY }: MouseEvent) => {
-		if (x === 0 && y === 0) {
-			x = clientX
-			y = clientY
-		}
-		draw(clientX, clientY)
+	const handleMouseMove = throttle(
+		({ clientX, clientY }: MouseEvent) => {
+			if (x === 0 && y === 0) {
+				x = clientX
+				y = clientY
+			}
+			draw(clientX, clientY)
+		},
+		75,
+		true,
+	)
+
+	const handleTouchMove = ({ changedTouches }: TouchEvent) => {
+		Array.from(changedTouches).forEach(({ clientX, clientY }) =>
+			handleMouseMove({ clientX, clientY }),
+		)
 	}
 
 	useEffect(() => {
-		document.addEventListener(
-			'mousemove',
-			throttle(handleMouseMove, 75, true),
-			{
-				passive: true,
-			},
-		)
+		document.addEventListener('mousemove', handleMouseMove, {
+			passive: true,
+		})
+		document.addEventListener('touchmove', handleTouchMove, {
+			passive: true,
+		})
 
 		setWidth(window.innerWidth)
 		setHeight(window.innerHeight)
+
 		if (ref && ref.current) {
 			const ctx = ref.current.getContext('2d')
 
@@ -61,6 +71,7 @@ const Canvas: React.FunctionComponent = () => {
 
 		return () => {
 			document.removeEventListener('mousemove', handleMouseMove)
+			document.removeEventListener('touchmove', handleTouchMove)
 		}
 	}, [])
 
@@ -84,56 +95,3 @@ const Canvas: React.FunctionComponent = () => {
 }
 
 export default Canvas
-
-// export default class Canvas extends PureComponent<Props, State> {
-// 	ref = createRef<HTMLCanvasElement>()
-// 	x = 0
-// 	y = 0
-// 	state = { width: 0, height: 2600 }
-
-// 	constructor(props: Props) {
-// 		super(props)
-
-// 		this.handleMouseMove = this.handleMouseMove.bind(this)
-// 		// this.handleScroll = this.handleScroll.bind(this);
-// 	}
-
-// 	// handleScroll() {
-// 	//     if (this.x && this.y) {
-// 	//         const ctx = this.ref.current.getContext('2d');
-// 	//         const newX = this.x - (this.x - window.scrollX);
-// 	//         const newY = this.y - (this.y - window.scrollY);
-
-// 	//         ctx.beginPath();
-// 	//         ctx.moveTo(this.x, this.y);
-// 	//         ctx.lineTo(newX, newY);
-// 	//         ctx.stroke();
-// 	//         this.x = newX;
-// 	//         this.y = newY;
-// 	//     }
-// 	// }
-
-// 	componentDidMount() {
-// 		this.setState({
-// 			width: window.innerWidth,
-// 			height: window.innerHeight,
-// 		})
-// 		document.addEventListener('mousemove', this.handleMouseMove, {
-// 			passive: true,
-// 		})
-// 		// window.addEventListener('scroll', this.handleScroll, {
-// 		//     passive: true,
-// 		// });
-// 	}
-
-// 	componentWillUnmount() {
-//
-// 		// window.removeEventListener('scroll', this.handleScroll);
-// 	}
-
-// 	render() {
-// 		return (
-
-// 		)
-// 	}
-// }
