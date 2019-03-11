@@ -34,7 +34,7 @@ const Site: React.FC<Props> = ({ content, color }) => {
 		})
 
 		scrolling = window.setTimeout(function() {
-			setDuration(1000)
+			setDuration(500)
 			setX(0)
 		}, 60)
 	}
@@ -74,24 +74,27 @@ const Site: React.FC<Props> = ({ content, color }) => {
 					left: 0;
 					top: 0;
 					right: 0;
+					margin: 2rem;
 					color: ${color === 'main' ? '#fff' : color}};
+					text-shadow: ${color === 'main'
+						? 'rgba(0, 0, 0, 0.7) 1px 1px 0px'
+						: 'none'}};
 					-webkit-font-smoothing: antialiased;
 					transition-property: transform;
 					transition-timing-function: linear;
-					opacity: ${color === 'main' ? 0.8 : 0.5};
-					max-width: 80ch;
+					opacity: ${color === 'main' ? 1 : 0.7};
 					will-change: transform;
 				}
 
 				div,
 				div :global(*) {
-					font-weight: bold !important;
+					font-weight: normal !important;
 					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-					font-size: 60px !important;
-					line-height: 0.9 !important;
-					letter-spacing: -3px;
-					word-spacing: 0.3em;
-					text-transform: uppercase;
+					font-size: 16px !important;
+				}
+
+				div :global(> *) {
+					margin-bottom: 1.4rem;
 				}
 			`}</style>
 		</>

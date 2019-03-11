@@ -27,11 +27,12 @@ const Head: React.FC<Props> = ({
 		<style jsx global>
 			{`
 				html {
-					line-height: 1.4;
+					line-height: 1.6;
 					-webkit-text-size-adjust: 100%;
 					min-height: 100%;
 					height: 100%;
 					box-sizing: border-box;
+					-webkit-font-smoothing: antialiased;
 				}
 				*,
 				*:before,
@@ -43,7 +44,9 @@ const Head: React.FC<Props> = ({
 					font-size: 1em;
 				}
 				body {
-					font-family: 'Times New Roman', serif;
+					font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+						Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+						sans-serif;
 					min-height: 100%;
 					position: relative;
 					overflow-x: hidden;
@@ -59,12 +62,6 @@ const Head: React.FC<Props> = ({
 				h5,
 				li {
 					margin-bottom: 1rem;
-				}
-				h1 {
-					text-align: center;
-					font-variant: small-caps;
-					font-size: 150%;
-					font-weight: normal;
 				}
 				hr {
 					box-sizing: content-box;

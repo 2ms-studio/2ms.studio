@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import ActiveLink from './ActiveLink'
 
 export interface Props {
 	white?: boolean
@@ -8,24 +8,22 @@ const Nav: React.FC<Props> = ({ white }) => (
 	<nav>
 		<ul>
 			<li>
-				<Link href="/">
-					<a>/</a>
-				</Link>
+				<ActiveLink href="/">home</ActiveLink>
 			</li>
 			<li>
-				<Link href="/video">
-					<a>/video</a>
-				</Link>
+				<ActiveLink href="/video">video</ActiveLink>
 			</li>
 			<li>
-				<Link href="/bio">
-					<a>/bio</a>
-				</Link>
+				<ActiveLink href="/design">design</ActiveLink>
 			</li>
 			<li>
-				<Link href="/contact">
-					<a>/contact</a>
-				</Link>
+				<ActiveLink href="/press">press</ActiveLink>
+			</li>
+			<li>
+				<ActiveLink href="/bio">bio</ActiveLink>
+			</li>
+			<li>
+				<ActiveLink href="/contact">contact</ActiveLink>
 			</li>
 		</ul>
 		<style jsx>{`
@@ -42,7 +40,7 @@ const Nav: React.FC<Props> = ({ white }) => (
 			}
 			nav {
 				position: fixed;
-				top: 1em;
+				top: 3em;
 				left: 1em;
 				display: inline-block;
 				z-index: 15;
@@ -53,25 +51,10 @@ const Nav: React.FC<Props> = ({ white }) => (
 				display: flex;
 				flex-direction: column;
 			}
-			a {
-				color: ${white ? 'white' : 'black'};
-				font-weight: bold;
-				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-				font-size: 40px;
-				line-height: 0.9;
-				letter-spacing: -3px;
-				word-spacing: 0.3em;
-				text-transform: uppercase;
-				text-decoration: none;
-				animation-duration: 50ms;
-				animation-iteration-count: infinite;
-				display: block;
+			li {
+				margin: 0;
 			}
-			a:hover {
-				color: ${white
-					? 'rgba(0, 0, 0, 0.5)'
-					: 'rgba(255, 255, 255, 0.5)'};
-			}
+
 			@media (min-width: 12450px) {
 				nav {
 					top: 2em;
