@@ -12,16 +12,18 @@ const Contact: React.FC = () => (
 				<a href="https://sndrs.dev">sndrs.dev</a>
 			</dd>
 		</dl>
-		<style jsx global>{`
+		<style jsx>{`
 			dl {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate(-50%, -50%);
-				background-color: rgba(255, 255, 255, 0.95);
+				transform: translate(-50%, -50%) rotate(3deg);
+				background-color: rgba(0, 0, 0, 0.85);
 				padding: 2rem;
 				z-index: 15;
 				font-size: 14px;
+				box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.5);
+				color: white;
 			}
 
 			dt {
@@ -31,6 +33,12 @@ const Contact: React.FC = () => (
 
 			dd + dt {
 				margin-top: 1rem;
+			}
+
+			a,
+			a:visited,
+			a:active {
+				color: lime;
 			}
 		`}</style>
 	</Page>

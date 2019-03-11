@@ -7,7 +7,7 @@ export interface Props {
 	children?: React.ReactNode
 }
 
-const ActiveLink: React.FC<Props> = ({ children, router, href }) => {
+const NavLink: React.FC<Props> = ({ children, router, href }) => {
 	return (
 		<>
 			<Link href={href}>
@@ -29,11 +29,11 @@ const ActiveLink: React.FC<Props> = ({ children, router, href }) => {
 
 				a.active,
 				a:hover {
-					color: rgba(255, 255, 255, 0.5);
+					color: rgba(255, 255, 255, 1);
 				}
 			`}</style>
 		</>
 	)
 }
 
-export default withRouter(ActiveLink)
+export default withRouter(NavLink)

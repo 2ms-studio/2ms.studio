@@ -23,6 +23,7 @@
 		"next": "^8.0.3",
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
+		"react-player": "^1.9.3",
 		"react-pose": "^4.0.8",
 		"webpack": "^4.29.6",
 		"yarn": "^1.13.0"

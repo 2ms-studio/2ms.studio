@@ -1,4 +1,4 @@
-import ActiveLink from './ActiveLink'
+import NavLink from './NavLink'
 
 export interface Props {
 	white?: boolean
@@ -8,22 +8,22 @@ const Nav: React.FC<Props> = ({ white }) => (
 	<nav>
 		<ul>
 			<li>
-				<ActiveLink href="/">home</ActiveLink>
+				<NavLink href="/">home</NavLink>
 			</li>
 			<li>
-				<ActiveLink href="/video">video</ActiveLink>
+				<NavLink href="/video">videos</NavLink>
 			</li>
 			<li>
-				<ActiveLink href="/design">design</ActiveLink>
+				<NavLink href="/design">design</NavLink>
 			</li>
 			<li>
-				<ActiveLink href="/press">press</ActiveLink>
+				<NavLink href="/press">press</NavLink>
 			</li>
 			<li>
-				<ActiveLink href="/bio">bio</ActiveLink>
+				<NavLink href="/bio">bio</NavLink>
 			</li>
 			<li>
-				<ActiveLink href="/contact">contact</ActiveLink>
+				<NavLink href="/contact">contact</NavLink>
 			</li>
 		</ul>
 		<style jsx>{`
@@ -40,7 +40,7 @@ const Nav: React.FC<Props> = ({ white }) => (
 			}
 			nav {
 				position: fixed;
-				top: 3em;
+				top: 1em;
 				left: 1em;
 				display: inline-block;
 				z-index: 15;

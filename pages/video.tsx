@@ -1,0 +1,46 @@
+import ReactPlayer from 'react-player'
+import Page from '../components/Page'
+import videos from '../dan-edits-these/videos.json'
+
+const Video: React.FC = () => (
+	<Page>
+		<div>
+			{videos.map(video => (
+				<div key={video} className="wrapper">
+					<ReactPlayer
+						url={video}
+						className="player"
+						width="100%"
+						height="100%"
+						controls={true}
+					/>
+				</div>
+			))}
+			<style jsx>{`
+				div {
+					position: relative;
+					max-width: 60ch;
+					z-index: 15;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.wrapper {
+					position: relative;
+					padding-top: 56.25%;
+					border: 2rem solid rgba(0, 0, 0, 0.8);
+				}
+				.wrapper + .wrapper {
+					border-top: none;
+				}
+
+				.wrapper :global(.player) {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			`}</style>
+		</div>
+	</Page>
+)
+
+export default Video
