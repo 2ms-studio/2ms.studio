@@ -94,14 +94,12 @@ const RGBSplit: React.FC = ({ children }) => {
 			<style jsx>{`
 				.wrapper {
 					position: relative;
-
 					mix-blend-mode: difference;
 				}
 				.split {
 					position: absolute;
 					top: 0;
 					left: 0;
-					z-index: 0;
 					transition-property: transform;
 					transition-timing-function: linear;
 					opacity: 0.7;

@@ -14,6 +14,7 @@ const Page: React.FC = ({ children }) => (
 			}
 			div :global(nav + div) {
 				margin-top: 10px;
+				z-index: 10;
 			}
 
 			@media (min-width: 640px) {
