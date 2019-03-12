@@ -4,7 +4,6 @@ import meta from '../dan-edits-these/meta.json'
 export interface Props {
 	title?: string
 	description?: string
-	children?: React.ReactNode
 }
 
 const Head: React.FC<Props> = ({

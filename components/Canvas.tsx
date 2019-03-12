@@ -2,7 +2,7 @@ import throttle from 'just-throttle'
 import { useEffect, useRef, useState } from 'react'
 import random from '../lib/random'
 
-const Canvas: React.FunctionComponent = () => {
+const Canvas: React.FC = () => {
 	let x = 0
 	let y = 0
 	const [width, setWidth] = useState(0)

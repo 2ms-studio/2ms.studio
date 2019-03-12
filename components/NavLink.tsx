@@ -4,7 +4,6 @@ import { SingletonRouter, withRouter } from 'next/router'
 export interface Props {
 	router: SingletonRouter
 	href: string
-	children?: React.ReactNode
 }
 
 const NavLink: React.FC<Props> = ({ children, router, href }) => {

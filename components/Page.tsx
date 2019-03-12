@@ -1,11 +1,7 @@
 import Head from './Head'
 import Nav from './Nav'
 
-export interface Props {
-	children?: React.ReactNode
-}
-
-const Page: React.FC<Props> = ({ children }) => (
+const Page: React.FC = ({ children }) => (
 	<>
 		<Head />
 		<div>
