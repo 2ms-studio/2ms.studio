@@ -1,7 +1,5 @@
-import Page from '../components/Page'
-
 const Contact: React.FC = () => (
-	<Page>
+	<>
 		<dl>
 			<dt>email</dt>
 			<dd>
@@ -17,13 +15,12 @@ const Contact: React.FC = () => (
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				transform: translate(-50%, -50%) rotate(3deg);
+				transform: translate(-50%, -50%) rotate(-1deg);
 				background-color: rgba(0, 0, 0, 0.85);
 				padding: 2rem;
 				z-index: 15;
 				font-size: 14px;
 				box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.5);
-				color: white;
 			}
 
 			dt {
@@ -38,10 +35,10 @@ const Contact: React.FC = () => (
 			a,
 			a:visited,
 			a:active {
-				color: lime;
+				color: #00f;
 			}
 		`}</style>
-	</Page>
+	</>
 )
 
 export default Contact

@@ -76,10 +76,10 @@ const Canvas: React.FC = () => {
 	}, [])
 
 	return (
-		<div>
+		<>
 			<canvas ref={ref} width={width} height={height} />
 			<style jsx>{`
-				div {
+				canvas {
 					position: fixed;
 					top: 0;
 					left: 0;
@@ -87,10 +87,9 @@ const Canvas: React.FC = () => {
 					right: 0;
 					pointer-events: none;
 					overflow: hidden;
-					z-index: 5;
 				}
 			`}</style>
-		</div>
+		</>
 	)
 }
 

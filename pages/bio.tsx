@@ -1,21 +1,12 @@
 import Head from '../components/Head'
-import Page from '../components/Page'
 import BioContent from '../dan-edits-these/bio.md'
 import meta from '../dan-edits-these/meta.json'
 
 const Bio: React.FC = () => (
-	<Page>
+	<div>
 		<Head title="Dan Tombs’ Bio" description={meta.description.bio} />
-		<div>
-			<BioContent />
-		</div>
+		<BioContent />
 		<style jsx>{`
-			div {
-				position: relative;
-				z-index: 10;
-				color: white;
-			}
-
 			div :global(p),
 			div :global(h2),
 			div :global(h1) {
@@ -57,7 +48,7 @@ const Bio: React.FC = () => (
 				font-style: normal;
 			}
 		`}</style>
-	</Page>
+	</div>
 )
 
 export default Bio

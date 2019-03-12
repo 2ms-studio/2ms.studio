@@ -1,5 +1,3 @@
-import Page from '../components/Page'
+const Design: React.FC<{}> = () => <div />
 
-const Home: React.FC<{}> = () => <Page />
-
-export default Home
+export default Design

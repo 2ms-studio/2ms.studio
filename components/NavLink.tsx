@@ -18,7 +18,6 @@ const NavLink: React.FC<Props> = ({ children, router, href }) => {
 			<style jsx>{`
 				a {
 					color: black;
-					mix-blend-mode: difference;
 					font-weight: bold;
 					font-size: 40px;
 					line-height: 1;

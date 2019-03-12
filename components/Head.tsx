@@ -31,7 +31,6 @@ const Head: React.FC<Props> = ({
 					min-height: 100%;
 					height: 100%;
 					box-sizing: border-box;
-					-webkit-font-smoothing: antialiased;
 				}
 				*,
 				*:before,
@@ -50,6 +49,9 @@ const Head: React.FC<Props> = ({
 					position: relative;
 					overflow-x: hidden;
 					background-color: black;
+					padding: 15px;
+					color: white;
+					-webkit-font-smoothing: antialiased;
 				}
 				details,
 				main {
