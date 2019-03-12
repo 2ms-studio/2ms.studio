@@ -2,6 +2,7 @@ import { Dispatch, useEffect, useState } from 'react'
 import random from '../lib/random'
 
 interface RGBSetting {
+	[key: string]: number
 	red: number
 	lime: number
 	blue: number
