@@ -4,7 +4,6 @@ import { SingletonRouter, withRouter } from 'next/router'
 export interface Props {
 	router: SingletonRouter
 	href: string
-	children?: React.ReactNode
 }
 
 const NavLink: React.FC<Props> = ({ children, router, href }) => {
@@ -19,7 +18,6 @@ const NavLink: React.FC<Props> = ({ children, router, href }) => {
 			<style jsx>{`
 				a {
 					color: black;
-					mix-blend-mode: difference;
 					font-weight: bold;
 					font-size: 40px;
 					line-height: 1;

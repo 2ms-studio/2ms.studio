@@ -2,7 +2,7 @@ import throttle from 'just-throttle'
 import { useEffect, useRef, useState } from 'react'
 import random from '../lib/random'
 
-const Canvas: React.FunctionComponent = () => {
+const Canvas: React.FC = () => {
 	let x = 0
 	let y = 0
 	const [width, setWidth] = useState(0)
@@ -76,10 +76,10 @@ const Canvas: React.FunctionComponent = () => {
 	}, [])
 
 	return (
-		<div>
+		<>
 			<canvas ref={ref} width={width} height={height} />
 			<style jsx>{`
-				div {
+				canvas {
 					position: fixed;
 					top: 0;
 					left: 0;
@@ -87,10 +87,9 @@ const Canvas: React.FunctionComponent = () => {
 					right: 0;
 					pointer-events: none;
 					overflow: hidden;
-					z-index: 5;
 				}
 			`}</style>
-		</div>
+		</>
 	)
 }
 

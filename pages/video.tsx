@@ -1,9 +1,8 @@
 import ReactPlayer from 'react-player'
-import Page from '../components/Page'
 import videos from '../dan-edits-these/videos.json'
 
 const Video: React.FC = () => (
-	<Page>
+	<>
 		<div>
 			{videos.map(video => (
 				<div key={video} className="wrapper">
@@ -36,7 +35,7 @@ const Video: React.FC = () => (
 				}
 			`}</style>
 		</div>
-	</Page>
+	</>
 )
 
 export default Video

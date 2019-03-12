@@ -1,7 +1,7 @@
 import NavLink from './NavLink'
 
 const Nav: React.FC = () => (
-	<nav>
+	<>
 		<ul>
 			<li>
 				<NavLink href="/">home</NavLink>
@@ -23,10 +23,6 @@ const Nav: React.FC = () => (
 			</li>
 		</ul>
 		<style jsx>{`
-			nav {
-				position: relative;
-				z-index: 15;
-			}
 			ul {
 				list-style: none;
 				padding: 0;
@@ -35,15 +31,9 @@ const Nav: React.FC = () => (
 			}
 			li {
 				margin: 0;
-				width: 50%;
-			}
-			@media (min-width: 640px) {
-				nav {
-					position: fixed;
-				}
 			}
 		`}</style>
-	</nav>
+	</>
 )
 
 export default Nav
