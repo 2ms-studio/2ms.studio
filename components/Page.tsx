@@ -6,10 +6,35 @@ export interface Props {
 }
 
 const Page: React.FC<Props> = ({ children }) => (
-	<div>
+	<>
 		<Head />
-		<Nav />
-		{children}
-	</div>
+		<div>
+			<Nav />
+			{children}
+		</div>
+		<style jsx>{`
+			div {
+				padding: 15px;
+			}
+			div :global(nav + div) {
+				margin-top: 10px;
+			}
+
+			@media (min-width: 640px) {
+				div :global(nav + div) {
+					margin-left: 155px;
+					max-width: 500px;
+					margin-top: 0;
+				}
+			}
+
+			@media (min-width: 840px) {
+				div :global(nav + div) {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		`}</style>
+	</>
 )
 export default Page

@@ -19,15 +19,11 @@ const Video: React.FC = () => (
 			<style jsx>{`
 				div {
 					position: relative;
-					max-width: 60ch;
 					z-index: 15;
-					margin-left: auto;
-					margin-right: auto;
 				}
 				.wrapper {
 					position: relative;
 					padding-top: 56.25%;
-					border: 2rem solid rgba(0, 0, 0, 0.8);
 				}
 				.wrapper + .wrapper {
 					border-top: none;

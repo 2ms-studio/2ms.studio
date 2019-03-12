@@ -74,7 +74,6 @@ const Site: React.FC<Props> = ({ content, color }) => {
 					left: 0;
 					top: 0;
 					right: 0;
-					margin: 2rem;
 					color: ${color === 'main' ? '#fff' : color}};
 					text-shadow: ${color === 'main'
 						? 'rgba(0, 0, 0, 0.7) 1px 1px 0px'

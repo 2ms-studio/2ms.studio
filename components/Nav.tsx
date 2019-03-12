@@ -23,22 +23,8 @@ const Nav: React.FC = () => (
 			</li>
 		</ul>
 		<style jsx>{`
-			@keyframes freakout {
-				0% {
-					color: rgba(255, 0, 0, 0.5);
-				}
-				50% {
-					color: rgba(0, 255, 0, 0.5);
-				}
-				100% {
-					color: rgba(0, 0, 255, 0.5);
-				}
-			}
 			nav {
-				position: fixed;
-				top: 1em;
-				left: 1em;
-				display: inline-block;
+				position: relative;
 				z-index: 15;
 			}
 			ul {
@@ -49,15 +35,11 @@ const Nav: React.FC = () => (
 			}
 			li {
 				margin: 0;
+				width: 50%;
 			}
-
-			@media (min-width: 12450px) {
+			@media (min-width: 640px) {
 				nav {
-					top: 2em;
-					left: 2em;
-				}
-				a {
-					font-size: 100px;
+					position: fixed;
 				}
 			}
 		`}</style>

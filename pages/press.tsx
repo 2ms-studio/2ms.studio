@@ -12,11 +12,7 @@ const Home: React.FC<{}> = () => (
 		<style jsx>{`
 			div {
 				position: relative;
-				z-index: 1;
-				max-width: 60ch;
 				z-index: 10;
-				margin-left: auto;
-				margin-right: auto;
 				background-color: rgba(0, 0, 0, 0.4);
 				mix-blend-mode: difference;
 			}
