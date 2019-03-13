@@ -1,18 +1,23 @@
-import pages from '../.scraped/urls.json'
-import RGBSplit from '../components/RGBSplit'
+import links from '../dan-edits-these/press-links.json'
 
 const Home: React.FC<{}> = () => (
 	<>
-		<RGBSplit>
-			<div dangerouslySetInnerHTML={{ __html: pages[2] }} />
-		</RGBSplit>
+		<ul>
+			{links.map(link => (
+				<li key={link}>
+					<a href={link}>{link}</a>
+				</li>
+			))}
 
-		<style jsx>{`
-			div {
-				position: relative;
-				z-index: 10;
-			}
-		`}</style>
+			<style jsx>{`
+				ul {
+					list-style-type: none;
+				}
+				a {
+					color: white;
+				}
+			`}</style>
+		</ul>
 	</>
 )
 

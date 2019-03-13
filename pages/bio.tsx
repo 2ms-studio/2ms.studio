@@ -1,21 +1,23 @@
 import Head from '../components/Head'
+import RGBSplit from '../components/RGBSplit'
 import BioContent from '../dan-edits-these/bio.md'
 import meta from '../dan-edits-these/meta.json'
 
 const Bio: React.FC = () => (
 	<div>
 		<Head title="Dan Tombs’ Bio" description={meta.description.bio} />
-		<BioContent />
-		<style jsx>{`
-			div :global(p),
-			div :global(h2),
-			div :global(h1) {
-				background-color: rgba(0, 0, 0, 0.6);
-			}
+		<RGBSplit>
+			<BioContent />
+		</RGBSplit>
 
+		<style jsx>{`
+			div {
+				position: relative;
+				z-index: 10;
+			}
 			div :global(h1) {
 				text-align: center;
-				font-size: 150%;
+				font-size: 200%;
 				font-weight: normal;
 				margin-bottom: 0;
 				position: relative;
@@ -23,9 +25,9 @@ const Bio: React.FC = () => (
 			div :global(h2) {
 				text-align: center;
 				font-weight: normal;
-				font-size: 12px;
+				font-size: 87.5%;
 				margin-bottom: 15px;
-				padding-bottom: 0.4em;
+				padding-bottom: 0.2em;
 				position: relative;
 			}
 			div :global(p) {

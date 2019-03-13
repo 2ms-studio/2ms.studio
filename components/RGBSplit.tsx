@@ -76,7 +76,6 @@ const RGBSplit: React.FC = ({ children }) => {
 
 	return (
 		<div className="wrapper">
-			{children}
 			{splitIt &&
 				['red', 'lime', 'blue'].map(color => (
 					<div
@@ -91,6 +90,7 @@ const RGBSplit: React.FC = ({ children }) => {
 						{children}
 					</div>
 				))}
+			{children}
 			<style jsx>{`
 				.wrapper {
 					position: relative;
