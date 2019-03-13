@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 
 export default class App extends NextApp {
 	public render() {
-		const { Component, pageProps } = this.props
+		const { Component, pageProps, router } = this.props
 
 		return (
 			<>
@@ -24,8 +24,11 @@ export default class App extends NextApp {
 						<Nav />
 						<style jsx>{`
 							nav {
-								position: relative;
+								position: ${router.pathname === '/'
+									? 'fixed'
+									: 'relative'};
 								z-index: 15;
+								width: 150px;
 							}
 							@media (min-width: 640px) {
 								nav {
@@ -38,7 +41,7 @@ export default class App extends NextApp {
 						<Component {...pageProps} />
 						<style jsx>{`
 							div {
-								margin-top: 10px;
+								margin-top: ${router.pathname === '/' ? 0 : 10};px;
 								z-index: 10;
 							}
 
