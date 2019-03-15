@@ -42,9 +42,8 @@ const Head: React.FC<Props> = ({
 					font-size: 1em;
 				}
 				body {
-					font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-						Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
-						sans-serif;
+					font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+						Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 					min-height: 100%;
 					position: relative;
 					overflow-x: hidden;

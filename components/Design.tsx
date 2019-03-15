@@ -41,7 +41,7 @@ const DesignImage: React.FC<Props> = ({
 				<h3 className="client">{[client, date].filter(Boolean).join(', ')}</h3>
 			)}
 
-			{description && <p className="description">> {description}</p>}
+			{description && <p className="description">&gt; {description}</p>}
 		</div>
 		<LazyLoad height={300}>
 			{images.map(src => (
