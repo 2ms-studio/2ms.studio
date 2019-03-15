@@ -16,16 +16,18 @@ const NavLink: React.FC<Props> = ({ children, router, href }) => {
 			<style jsx>{`
 				a {
 					color: black;
-					font-weight: bold;
+					font-weight: 600;
 					font-size: 40px;
 					line-height: 1;
 					text-decoration: none;
 					display: block;
+					-webkit-font-smoothing: subpixel-antialiased;
 				}
 
 				a.active,
 				a:hover {
 					color: white;
+					-webkit-font-smoothing: antialiased;
 				}
 			`}</style>
 		</>

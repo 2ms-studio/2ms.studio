@@ -7,7 +7,7 @@ const Nav: React.FC = () => (
 				<NavLink href="/">draw</NavLink>
 			</li>
 			<li>
-				<NavLink href="/video">videos</NavLink>
+				<NavLink href="/video">video</NavLink>
 			</li>
 			<li>
 				<NavLink href="/design">design</NavLink>

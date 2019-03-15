@@ -14,18 +14,20 @@ const Bio: React.FC = () => (
 			div {
 				position: relative;
 				z-index: 10;
-				text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+				text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+				background-color: rgba(0, 0, 0, 0.6);
+				padding: 0 10px;
 			}
 			div :global(h1) {
 				text-align: center;
 				font-size: 200%;
-				font-weight: normal;
+				font-weight: 300;
 				margin-bottom: 0;
 				position: relative;
 			}
 			div :global(h2) {
 				text-align: center;
-				font-weight: normal;
+				font-weight: 100;
 				font-size: 87.5%;
 				margin-bottom: 15px;
 				padding-bottom: 0.2em;
@@ -35,6 +37,7 @@ const Bio: React.FC = () => (
 				display: inline;
 				padding: 3px 0 4px;
 				position: relative;
+				font-weight: 200;
 			}
 
 			div :global(p + p::before) {

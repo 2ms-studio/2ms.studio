@@ -25,7 +25,7 @@ const Video: React.FC = () => (
 					padding-top: 56.25%;
 				}
 				.wrapper + .wrapper {
-					border-top: none;
+					border-top: 15px dotted rgba(0, 0, 0, 0.6);
 				}
 
 				.wrapper :global(.player) {
