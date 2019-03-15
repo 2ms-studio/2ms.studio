@@ -15,7 +15,7 @@ const Bio: React.FC = () => (
 				position: relative;
 				z-index: 10;
 				text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
-				background-color: rgba(0, 0, 0, 0.6);
+				background-color: rgba(0, 0, 0, 0.4);
 				padding: 0 10px;
 			}
 			div :global(h1) {
