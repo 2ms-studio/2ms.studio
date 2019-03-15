@@ -7,6 +7,7 @@ const Press: React.FC<{}> = () => (
 			div {
 				position: relative;
 				z-index: 10;
+				mix-blend-mode: difference;
 			}
 			div :global(p) {
 				margin-bottom: 25px;
@@ -16,7 +17,6 @@ const Press: React.FC<{}> = () => (
 				padding-bottom: 10px;
 				font-size: 14px;
 				font-weight: 300;
-				box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
 			}
 			div :global(a) {
 				background-color: black;
