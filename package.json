@@ -7,7 +7,7 @@
 		"lint": "eslint . --ext .js --ext .ts --ext .tsx",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "next build",
-		"now-build": "yarn lint && next build && next export -o dist"
+		"now-build": "yarn lint && make upload && next build && next export -o dist"
 	},
 	"keywords": [],
 	"author": "",
