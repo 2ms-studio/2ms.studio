@@ -14,6 +14,7 @@ const Bio: React.FC = () => (
 			div {
 				position: relative;
 				z-index: 10;
+				text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
 			}
 			div :global(h1) {
 				text-align: center;

@@ -27,8 +27,7 @@ const RGBSplit: React.FC = ({ children }) => {
 		const absMin = Math.abs(min[colour])
 		const freq = (absMin + max[colour]) / 2
 		return Math.round(
-			freq * Math.sin(window.scrollY * 0.01 + offset[colour]) +
-				(absMin - freq),
+			freq * Math.sin(window.scrollY * 0.01 + offset[colour]) + (absMin - freq),
 		)
 	}
 
@@ -94,7 +93,6 @@ const RGBSplit: React.FC = ({ children }) => {
 			<style jsx>{`
 				.wrapper {
 					position: relative;
-					mix-blend-mode: difference;
 				}
 				.split {
 					position: absolute;
@@ -104,6 +102,8 @@ const RGBSplit: React.FC = ({ children }) => {
 					transition-timing-function: linear;
 					opacity: 0.7;
 					will-change: transform;
+					mix-blend-mode: difference;
+					text-shadow: none;
 				}
 
 				.split :global(*) {

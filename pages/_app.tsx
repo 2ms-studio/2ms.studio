@@ -24,9 +24,7 @@ export default class App extends NextApp {
 						<Nav />
 						<style jsx>{`
 							nav {
-								position: ${router.pathname === '/'
-									? 'fixed'
-									: 'relative'};
+								position: ${router.pathname === '/' ? 'fixed' : 'relative'};
 								z-index: 15;
 								width: 150px;
 								margin-bottom: 10px;

@@ -16,11 +16,13 @@ const Contact: React.FC = () => (
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%) rotate(-1deg);
-				background-color: rgba(0, 0, 0, 0.85);
+				background-color: white;
 				padding: 2rem;
 				z-index: 15;
 				font-size: 14px;
-				box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.5);
+				box-shadow: 15px 15px 0 rgba(255, 255, 255, 0.2);
+				color: black;
+				background-blend-mode: multiply;
 			}
 
 			dt {

@@ -10,9 +10,7 @@ const NavLink: React.FC<Props> = ({ children, router, href }) => {
 	return (
 		<>
 			<Link href={href}>
-				<a className={router.pathname === href ? 'active' : ''}>
-					{children}
-				</a>
+				<a className={router.pathname === href ? 'active' : ''}>{children}</a>
 			</Link>
 
 			<style jsx>{`
@@ -27,7 +25,7 @@ const NavLink: React.FC<Props> = ({ children, router, href }) => {
 
 				a.active,
 				a:hover {
-					color: rgba(255, 255, 255, 1);
+					color: white;
 				}
 			`}</style>
 		</>
