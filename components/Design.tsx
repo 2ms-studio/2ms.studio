@@ -43,17 +43,21 @@ const DesignImage: React.FC<Props> = ({
 
 			{description && <p className="description">&gt; {description}</p>}
 		</div>
-		<LazyLoad height={300}>
-			{images.map(src => (
+		{images.map(src => (
+			<LazyLoad height={width * uploads[src].ratio}>
 				<img
 					srcSet={[1, 2, 3, 4, 5]
-						.map(dpr => `${imageURI({ id: uploads[src], width, dpr })} ${dpr}x`)
+						.map(
+							dpr => `${imageURI({ id: uploads[src].id, width, dpr })} ${dpr}x`,
+						)
 						.join(',')}
 					alt=""
 					key={src}
+					width={width}
+					height={width * uploads[src].ratio}
 				/>
-			))}
-		</LazyLoad>
+			</LazyLoad>
+		))}
 
 		<style jsx>{`
 			section {
@@ -69,9 +73,7 @@ const DesignImage: React.FC<Props> = ({
 				left: 0;
 			}
 			img {
-				width: ${width}px;
-				height: auto;
-				display: table;
+				display: block;
 			}
 			.work,
 			.client,
