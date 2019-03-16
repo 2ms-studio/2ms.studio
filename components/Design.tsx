@@ -44,7 +44,7 @@ const DesignImage: React.FC<Props> = ({
 			{description && <p className="description">&gt; {description}</p>}
 		</div>
 		{images.map(src => (
-			<LazyLoad height={width * uploads[src].ratio}>
+			<LazyLoad height={width * uploads[src].ratio} key={src}>
 				<img
 					srcSet={[1, 2, 3, 4, 5]
 						.map(
@@ -52,7 +52,6 @@ const DesignImage: React.FC<Props> = ({
 						)
 						.join(',')}
 					alt=""
-					key={src}
 					width={width}
 					height={width * uploads[src].ratio}
 				/>
