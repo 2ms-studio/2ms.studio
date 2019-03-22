@@ -1,5 +1,4 @@
 import LazyLoad from 'react-lazyload'
-import uploads from '../image_uploads.json'
 
 interface Props {
 	images?: [string]
@@ -10,21 +9,20 @@ interface Props {
 	description?: string
 }
 
-const imageURI = ({
-	dpr,
-	width,
-	id,
-}: {
-	dpr: number
-	width: number
-	id: string
-}) =>
-	`https://res.cloudinary.com/twoms/image/upload/f_auto,q_60,c_scale,dpr_${dpr}.0,w_${width}/${id}`
+const uploads: {
+	[name: string]: {
+		id: string
+		ratio: number
+	}
+} = require('../image_uploads.json') // eslint-disable-line @typescript-eslint/no-var-requires
+
+const imageURI = ({ width, id }: { width: number; id: string }) =>
+	`https://res.cloudinary.com/twoms/image/upload/f_auto,q_60,c_scale,w_${width}/${id}`
 
 const width = 500
 
 const DesignImage: React.FC<Props> = ({
-	images = [],
+	images,
 	artist,
 	title,
 	client,
@@ -43,20 +41,28 @@ const DesignImage: React.FC<Props> = ({
 
 			{description && <p className="description">&gt; {description}</p>}
 		</div>
-		{images.map(src => (
-			<LazyLoad height={width * uploads[src].ratio} key={src}>
-				<img
-					srcSet={[1, 2, 3, 4, 5]
-						.map(
-							dpr => `${imageURI({ id: uploads[src].id, width, dpr })} ${dpr}x`,
-						)
-						.join(',')}
-					alt=""
-					width={width}
-					height={width * uploads[src].ratio}
-				/>
-			</LazyLoad>
-		))}
+		{images &&
+			images.map(src => (
+				<LazyLoad height={width * uploads[src].ratio} key={src}>
+					<img
+						srcSet={[
+							`${imageURI({ id: uploads[src].id, width: 290 })} 320w`,
+							`${imageURI({ id: uploads[src].id, width: 345 })} 375w`,
+							`${imageURI({ id: uploads[src].id, width: 384 })} 414w`,
+							`${imageURI({ id: uploads[src].id, width: 500 })} 500w`,
+							`${imageURI({ id: uploads[src].id, width: 608 })} 639w`,
+							`${imageURI({ id: uploads[src].id, width: 690 })} 750w`,
+							`${imageURI({ id: uploads[src].id, width: 768 })} 828w`,
+							`${imageURI({ id: uploads[src].id, width: 1000 })} 1000w`,
+							`${imageURI({ id: uploads[src].id, width: 1216 })} 1278w`,
+						].join(',')}
+						sizes={`(max-width: 639px) 100vw, ${width}px`}
+						alt=""
+						width={width}
+						height={width * uploads[src].ratio}
+					/>
+				</LazyLoad>
+			))}
 
 		<style jsx>{`
 			section {
@@ -73,7 +79,10 @@ const DesignImage: React.FC<Props> = ({
 			}
 			img {
 				display: block;
+				width: 100%;
+				height: auto;
 			}
+
 			.work,
 			.client,
 			.date,
