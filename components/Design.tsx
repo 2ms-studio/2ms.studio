@@ -32,7 +32,12 @@ const DesignImage: React.FC<Props> = ({
 	<section>
 		{images &&
 			images.map(src => (
-				<LazyLoad key={src} height={width * uploads[src].ratio}>
+				<LazyLoad
+					key={src}
+					height={width * uploads[src].ratio}
+					once
+					offset={100}
+				>
 					<div
 						style={{
 							position: 'relative',

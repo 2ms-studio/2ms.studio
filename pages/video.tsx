@@ -7,7 +7,7 @@ const Video: React.FC = () => (
 		<div>
 			{videos.map(video => (
 				<div className="wrapper" key={video}>
-					<LazyLoad>
+					<LazyLoad once offset={100}>
 						<ReactPlayer
 							url={video}
 							className="player"
