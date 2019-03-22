@@ -38,6 +38,8 @@ const PressLink: React.FC<Props> = ({ href, children, publication }) => (
 				right: 0;
 				left: 0;
 				bottom: 0;
+				background-color: black;
+				mix-blend-mode: color-burn;
 			}
 			a::after {
 				content: ' ⇾';
@@ -48,8 +50,7 @@ const PressLink: React.FC<Props> = ({ href, children, publication }) => (
 				text-decoration: underline;
 			}
 			a:hover::before {
-				background-color: black;
-				mix-blend-mode: color-burn;
+				background-color: white;
 			}
 		`}</style>
 	</p>
