@@ -30,6 +30,33 @@ const DesignImage: React.FC<Props> = ({
 	description,
 }) => (
 	<section>
+		{images &&
+			images.map(src => (
+				<LazyLoad key={src} height={width * uploads[src].ratio}>
+					<div
+						style={{
+							position: 'relative',
+							paddingTop: 100 * uploads[src].ratio + '%',
+						}}
+					>
+						<img
+							srcSet={[
+								`${imageURI({ id: uploads[src].id, width: 290 })} 320w`,
+								`${imageURI({ id: uploads[src].id, width: 345 })} 375w`,
+								`${imageURI({ id: uploads[src].id, width: 384 })} 414w`,
+								`${imageURI({ id: uploads[src].id, width: 500 })} 500w`,
+								`${imageURI({ id: uploads[src].id, width: 608 })} 639w`,
+								`${imageURI({ id: uploads[src].id, width: 690 })} 750w`,
+								`${imageURI({ id: uploads[src].id, width: 768 })} 828w`,
+								`${imageURI({ id: uploads[src].id, width: 1000 })} 1000w`,
+								`${imageURI({ id: uploads[src].id, width: 1216 })} 1278w`,
+							].join(',')}
+							sizes={`(max-width: 639px) 100vw, ${width}px`}
+							alt=""
+						/>
+					</div>
+				</LazyLoad>
+			))}
 		<div className="info">
 			<h2 className="work">
 				<span className="artist">{artist}</span>{' '}
@@ -41,28 +68,6 @@ const DesignImage: React.FC<Props> = ({
 
 			{description && <p className="description">&gt; {description}</p>}
 		</div>
-		{images &&
-			images.map(src => (
-				<LazyLoad height={width * uploads[src].ratio} key={src}>
-					<img
-						srcSet={[
-							`${imageURI({ id: uploads[src].id, width: 290 })} 320w`,
-							`${imageURI({ id: uploads[src].id, width: 345 })} 375w`,
-							`${imageURI({ id: uploads[src].id, width: 384 })} 414w`,
-							`${imageURI({ id: uploads[src].id, width: 500 })} 500w`,
-							`${imageURI({ id: uploads[src].id, width: 608 })} 639w`,
-							`${imageURI({ id: uploads[src].id, width: 690 })} 750w`,
-							`${imageURI({ id: uploads[src].id, width: 768 })} 828w`,
-							`${imageURI({ id: uploads[src].id, width: 1000 })} 1000w`,
-							`${imageURI({ id: uploads[src].id, width: 1216 })} 1278w`,
-						].join(',')}
-						sizes={`(max-width: 639px) 100vw, ${width}px`}
-						alt=""
-						width={width}
-						height={width * uploads[src].ratio}
-					/>
-				</LazyLoad>
-			))}
 
 		<style jsx>{`
 			section {
@@ -81,6 +86,8 @@ const DesignImage: React.FC<Props> = ({
 				display: block;
 				width: 100%;
 				height: auto;
+				position: absolute;
+				top: 0;
 			}
 
 			.work,
