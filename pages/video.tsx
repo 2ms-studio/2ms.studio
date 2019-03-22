@@ -1,3 +1,4 @@
+import LazyLoad from 'react-lazyload'
 import ReactPlayer from 'react-player'
 import videos from '../dan-edits-these/videos.json'
 
@@ -5,14 +6,16 @@ const Video: React.FC = () => (
 	<>
 		<div>
 			{videos.map(video => (
-				<div key={video} className="wrapper">
-					<ReactPlayer
-						url={video}
-						className="player"
-						width="100%"
-						height="100%"
-						controls={true}
-					/>
+				<div className="wrapper" key={video}>
+					<LazyLoad>
+						<ReactPlayer
+							url={video}
+							className="player"
+							width="100%"
+							height="100%"
+							controls={true}
+						/>
+					</LazyLoad>
 				</div>
 			))}
 			<style jsx>{`
