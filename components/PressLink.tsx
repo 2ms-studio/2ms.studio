@@ -16,20 +16,20 @@ const PressLink: React.FC<Props> = ({ href, children, publication }) => (
 				color: black;
 				padding-left: 5px;
 				padding-bottom: 10px;
-				font-size: 14px;
+				font-size: 13px;
 				font-weight: 300;
 				position: relative;
+				-webkit-font-smoothing: none;
+				font-family: verdana;
 			}
 			a {
-				background-color: black;
-				color: white;
 				display: inline-block;
 				padding-left: 10px;
+				padding-right: 10px;
 				padding-bottom: 2px;
 				text-decoration: none;
 				float: right;
 				margin-left: 15px;
-				font-style: italic;
 			}
 			a::before {
 				content: '';
@@ -38,8 +38,6 @@ const PressLink: React.FC<Props> = ({ href, children, publication }) => (
 				right: 0;
 				left: 0;
 				bottom: 0;
-				background-color: black;
-				mix-blend-mode: color-burn;
 			}
 			a::after {
 				content: ' ⇾';
@@ -48,9 +46,6 @@ const PressLink: React.FC<Props> = ({ href, children, publication }) => (
 				background-color: black;
 				color: white;
 				text-decoration: underline;
-			}
-			a:hover::before {
-				background-color: white;
 			}
 		`}</style>
 	</p>
