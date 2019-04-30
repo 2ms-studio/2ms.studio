@@ -51,6 +51,7 @@ const Head: React.FC<Props> = ({
 					padding: 15px;
 					color: white;
 					-webkit-font-smoothing: antialiased;
+					cursor: none;
 				}
 				details,
 				main {
