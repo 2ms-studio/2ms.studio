@@ -27,19 +27,18 @@ const Canvas: React.FC = () => {
 				const ctx = ref.current.getContext('2d')
 
 				if (ctx) {
-					ctx.lineJoin = 'miter'
-					ctx.lineCap = 'butt'
+					// ctx.lineCap = 'square'
 					window.requestAnimationFrame(() => {
 						ctx.beginPath()
 						ctx.moveTo(-500, 100)
 						ctx.lineTo(newX, newY)
 
 						ctx.strokeStyle = `hsla(${hue.next().value}, 100%, 50%, 0.6)`
-						ctx.lineWidth = 2
+						ctx.lineWidth = 4
 						ctx.stroke()
 
 						ctx.strokeStyle = 'black'
-						ctx.lineWidth = 1
+						ctx.lineWidth = 2
 						ctx.stroke()
 					})
 				}
