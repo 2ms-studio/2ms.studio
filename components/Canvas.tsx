@@ -1,56 +1,59 @@
-import throttle from 'just-throttle'
 import { useEffect, useRef, useState } from 'react'
-import random from '../lib/random'
 
 const Canvas: React.FC = () => {
-	let x = 0
-	let y = 0
 	const [width, setWidth] = useState(0)
 	const [height, setHeight] = useState(0)
 	const ref = useRef<HTMLCanvasElement>(null)
 
-	const draw = (newX: number, newY: number) => {
-		if (ref && ref.current) {
-			const ctx = ref.current.getContext('2d')
-
-			if (ctx) {
-				window.requestAnimationFrame(() => {
-					ctx.strokeStyle = `hsla(${random(0, 255)}, 100%, 50%, 0.6)`
-					ctx.beginPath()
-					ctx.moveTo(-500, 100)
-					ctx.lineTo(newX, newY)
-					ctx.stroke()
-					ctx.strokeStyle = `white`
-					ctx.beginPath()
-					ctx.moveTo(x, y)
-					ctx.lineTo(newX, newY)
-					ctx.stroke()
-					x = newX
-					y = newY
-				})
+	function* getHue() {
+		let i = 0
+		let ascending = true
+		while (true) {
+			if (i === 255) {
+				ascending = false
 			}
+			if (i === 0) {
+				ascending = true
+			}
+			yield ascending ? i++ : i--
 		}
 	}
 
-	const handleMouseMove = throttle(
-		({ clientX, clientY }: MouseEvent) => {
-			if (x === 0 && y === 0) {
-				x = clientX
-				y = clientY
-			}
-			draw(clientX, clientY)
-		},
-		75,
-		true,
-	)
-
-	const handleTouchMove = ({ changedTouches }: TouchEvent) => {
-		Array.from(changedTouches).forEach(({ clientX, clientY }) =>
-			handleMouseMove({ clientX, clientY }),
-		)
-	}
-
 	useEffect(() => {
+		const hue = getHue()
+
+		const draw = (newX: number, newY: number) => {
+			if (ref && ref.current) {
+				const ctx = ref.current.getContext('2d')
+
+				if (ctx) {
+					ctx.lineJoin = 'miter'
+					ctx.lineCap = 'butt'
+					window.requestAnimationFrame(() => {
+						ctx.beginPath()
+						ctx.moveTo(-500, 100)
+						ctx.lineTo(newX, newY)
+
+						ctx.strokeStyle = `hsla(${hue.next().value}, 100%, 50%, 0.6)`
+						ctx.lineWidth = 2
+						ctx.stroke()
+
+						ctx.strokeStyle = 'black'
+						ctx.lineWidth = 1
+						ctx.stroke()
+					})
+				}
+			}
+		}
+
+		const handleMouseMove = ({ clientX, clientY }: MouseEvent | Touch) => {
+			draw(clientX, clientY)
+		}
+
+		const handleTouchMove = ({ changedTouches }: TouchEvent) => {
+			Array.from(changedTouches).forEach(handleMouseMove)
+		}
+
 		document.addEventListener('mousemove', handleMouseMove, {
 			passive: true,
 		})
@@ -60,14 +63,6 @@ const Canvas: React.FC = () => {
 
 		setWidth(window.innerWidth)
 		setHeight(window.innerHeight)
-
-		if (ref && ref.current) {
-			const ctx = ref.current.getContext('2d')
-
-			if (ctx) {
-				ctx.translate(0.5, 0.5)
-			}
-		}
 
 		return () => {
 			document.removeEventListener('mousemove', handleMouseMove)
