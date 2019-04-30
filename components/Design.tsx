@@ -64,7 +64,7 @@ const DesignImage: React.FC<Props> = ({
 			))}
 		<div className="info">
 			<h2 className="work">
-				<span className="artist">{artist}</span>{' '}
+				<span className="artist">{artist}</span>
 				<span className="title">{title}</span>
 			</h2>
 			{(client || date) && (
@@ -111,6 +111,7 @@ const DesignImage: React.FC<Props> = ({
 
 			.artist {
 				text-transform: uppercase;
+				padding-right: 1ex;
 			}
 
 			.title,
