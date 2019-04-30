@@ -34,11 +34,11 @@ const Canvas: React.FC = () => {
 						ctx.lineTo(newX, newY)
 
 						ctx.strokeStyle = `hsla(${hue.next().value}, 100%, 50%, 0.6)`
-						ctx.lineWidth = 4
+						ctx.lineWidth = 3
 						ctx.stroke()
 
 						ctx.strokeStyle = 'black'
-						ctx.lineWidth = 2
+						ctx.lineWidth = 1
 						ctx.stroke()
 					})
 				}
