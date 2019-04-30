@@ -25,11 +25,13 @@ module.exports = {
 		sourceType: 'module',
 		project: './tsconfig.json',
 	},
-	plugins: [],
+	plugins: ['react-hooks'],
 	rules: {
 		'react/react-in-jsx-scope': 0,
 		'react/prop-types': 0,
-		'@typescript-eslint/explicit-function-return-type': 0
+		'@typescript-eslint/explicit-function-return-type': 0,
+		'react-hooks/rules-of-hooks': 'error',
+		'react-hooks/exhaustive-deps': 'warn',
 	},
 	settings: {
 		react: {
