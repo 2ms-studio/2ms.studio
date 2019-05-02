@@ -1,0 +1,11 @@
+{
+	"version": 2,
+	"alias": ["2ms.studio"],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"status": 301,
+			"headers": { "Location": "https://www.2ms.studio/$1" }
+		}
+	]
+}
