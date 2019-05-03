@@ -46,6 +46,7 @@ export default class App extends NextApp {
 							div {
 								margin-top: ${router.pathname === '/' ? 0 : 10};px;
 								z-index: 10;
+								cursor: initial;
 							}
 
 							@media (min-width: 640px) {
