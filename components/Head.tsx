@@ -1,5 +1,6 @@
 import NextHead from 'next/head'
 import meta from '../dan-edits-these/meta.json'
+import { GA_TRACKING_ID } from '../lib/gtag'
 
 export interface Props {
 	title?: string
@@ -22,6 +23,21 @@ const Head: React.FC<Props> = ({
 			<meta name="description" content={description} />
 			<title>{['2MS', title].filter(Boolean).join(' // ')}</title>
 			{children}
+			{/* Global Site Tag (gtag.js) - Google Analytics */}
+			<script
+				async
+				src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+			/>
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}');
+          `,
+				}}
+			/>
 		</NextHead>
 		<style jsx global>
 			{`
