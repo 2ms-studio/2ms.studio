@@ -54,7 +54,9 @@ const Head: React.FC<Props> = ({
 			<meta property="og:image:height" content="2000" />
 
 			<meta property="og:type" content="website" />
+
 			{children}
+
 			{/* Global Site Tag (gtag.js) - Google Analytics */}
 			<script
 				async
