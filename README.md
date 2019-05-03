@@ -2,7 +2,7 @@
 
 Website for 2MS.studio
 
-## Developement
+## Development
 
 ```
 $ git clone git@github.com:2ms-studio/2ms.studio.git
