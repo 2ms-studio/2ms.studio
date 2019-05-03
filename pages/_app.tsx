@@ -5,7 +5,7 @@ import Head from '../components/Head'
 import Nav from '../components/Nav'
 import * as gtag from '../lib/gtag'
 
-Router.events.on('routeChangeComplete', url => gtag.pageview(url))
+Router.events.on('routeChangeComplete', (url: string) => gtag.pageview(url))
 
 export default class App extends NextApp {
 	public render() {
