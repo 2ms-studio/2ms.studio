@@ -5,7 +5,7 @@ Website for 2MS.studio
 ## Developement
 
 ```
-$ git clone git@github.com:sndrs/2ms.studio.git
+$ git clone git@github.com:2ms-studio/2ms.studio.git
 $ cd 2ms.studio
 $ make dev
 ```
