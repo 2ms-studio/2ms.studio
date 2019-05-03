@@ -1,11 +1,13 @@
-import withGA from 'next-ga'
 import NextApp, { Container } from 'next/app'
 import Router from 'next/router'
 import Canvas from '../components/Canvas'
 import Head from '../components/Head'
 import Nav from '../components/Nav'
+import * as gtag from '../lib/gtag'
 
-class App extends NextApp {
+Router.events.on('routeChangeComplete', (url: string) => gtag.pageview(url))
+
+export default class App extends NextApp {
 	public render() {
 		const { Component, pageProps, router } = this.props
 
@@ -67,5 +69,3 @@ class App extends NextApp {
 		)
 	}
 }
-
-export default withGA('UA-81886915-2', Router)(App)
