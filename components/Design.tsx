@@ -1,4 +1,12 @@
 import LazyLoad from 'react-lazyload'
+import imageURI from '../lib/imageURI'
+
+const uploads: {
+	[name: string]: {
+		id: string
+		ratio: number
+	}
+} = require('../image_uploads.json') // eslint-disable-line @typescript-eslint/no-var-requires
 
 interface Props {
 	images?: [string]
@@ -8,16 +16,6 @@ interface Props {
 	date?: string
 	description?: string
 }
-
-const uploads: {
-	[name: string]: {
-		id: string
-		ratio: number
-	}
-} = require('../image_uploads.json') // eslint-disable-line @typescript-eslint/no-var-requires
-
-const imageURI = ({ width, id }: { width: number; id: string }) =>
-	`https://res.cloudinary.com/twoms/image/upload/f_auto,q_60,c_scale,w_${width}/${id}`
 
 const width = 500
 
@@ -46,15 +44,15 @@ const DesignImage: React.FC<Props> = ({
 					>
 						<img
 							srcSet={[
-								`${imageURI({ id: uploads[src].id, width: 290 })} 320w`,
-								`${imageURI({ id: uploads[src].id, width: 345 })} 375w`,
-								`${imageURI({ id: uploads[src].id, width: 384 })} 414w`,
-								`${imageURI({ id: uploads[src].id, width: 500 })} 500w`,
-								`${imageURI({ id: uploads[src].id, width: 608 })} 639w`,
-								`${imageURI({ id: uploads[src].id, width: 690 })} 750w`,
-								`${imageURI({ id: uploads[src].id, width: 768 })} 828w`,
-								`${imageURI({ id: uploads[src].id, width: 1000 })} 1000w`,
-								`${imageURI({ id: uploads[src].id, width: 1216 })} 1278w`,
+								`${imageURI({ src, width: 290 })} 320w`,
+								`${imageURI({ src, width: 345 })} 375w`,
+								`${imageURI({ src, width: 384 })} 414w`,
+								`${imageURI({ src, width: 500 })} 500w`,
+								`${imageURI({ src, width: 608 })} 639w`,
+								`${imageURI({ src, width: 690 })} 750w`,
+								`${imageURI({ src, width: 768 })} 828w`,
+								`${imageURI({ src, width: 1000 })} 1000w`,
+								`${imageURI({ src, width: 1216 })} 1278w`,
 							].join(',')}
 							sizes={`(max-width: 639px) 100vw, ${width}px`}
 							alt=""

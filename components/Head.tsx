@@ -1,4 +1,5 @@
 import NextHead from 'next/head'
+import { withRouter } from 'next/router'
 import meta from '../dan-edits-these/meta.json'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
@@ -8,7 +9,8 @@ export interface Props {
 }
 
 const Head: React.FC<Props> = ({
-	title = '',
+	router,
+	title = router.pathname.substr(1),
 	description = meta.description.default,
 	children,
 } = {}) => (
@@ -21,7 +23,37 @@ const Head: React.FC<Props> = ({
 			/>
 			<meta charSet="utf-8" />
 			<meta name="description" content={description} />
-			<title>{['2MS', title].filter(Boolean).join(' // ')}</title>
+			<title>{['2MS', title].filter(Boolean).join(' · ')}</title>
+			<meta property="og:site_name" content="2MS.studio" />
+			<meta
+				property="og:title"
+				content={['2MS', title].filter(Boolean).join(' · ')}
+			/>
+			<meta property="og:description" content={description} />
+			<meta
+				property="og:url"
+				content={`https://www.2ms.studio${router.asPath}`}
+			/>
+			<meta
+				property="og:image"
+				content="https://res.cloudinary.com/twoms/image/upload/f_auto,q_100,c_scale,w_300/dt_press_shot_sq_02.jpg"
+			/>
+			<meta property="og:image:width" content="300" />
+			<meta property="og:image:height" content="300" />
+			<meta
+				property="og:image"
+				content="https://res.cloudinary.com/twoms/image/upload/f_auto,q_100,c_scale,w_1000/dt_press_shot_sq_02.jpg"
+			/>
+			<meta property="og:image:width" content="1000" />
+			<meta property="og:image:height" content="1000" />
+			<meta
+				property="og:image"
+				content="https://res.cloudinary.com/twoms/image/upload/f_auto,q_100,c_scale,w_2000/dt_press_shot_sq_02.jpg"
+			/>
+			<meta property="og:image:width" content="2000" />
+			<meta property="og:image:height" content="2000" />
+
+			<meta property="og:type" content="website" />
 			{children}
 			{/* Global Site Tag (gtag.js) - Google Analytics */}
 			<script
@@ -100,4 +132,4 @@ const Head: React.FC<Props> = ({
 	</>
 )
 
-export default Head
+export default withRouter(Head)
