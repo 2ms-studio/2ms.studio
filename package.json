@@ -28,7 +28,7 @@
 		"react-lazyload": "^2.5.0",
 		"react-player": "^1.11.0",
 		"webpack": "^4.30.0",
-		"yarn": "^1.15.2"
+		"yarn": "^1.17.3"
 	},
 	"devDependencies": {
 		"@types/next": "^8.0.4",
