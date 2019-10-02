@@ -22,7 +22,7 @@
 		"dotenv": "^7.0.0",
 		"globby": "^9.2.0",
 		"mkdirp": "^0.5.1",
-		"next": "^8.1.0",
+		"next": "^9.0.0",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
 		"react-lazyload": "^2.5.0",
