@@ -1,11 +1,12 @@
 import NextHead from 'next/head'
-import { withRouter } from 'next/router'
+import { SingletonRouter, withRouter } from 'next/router'
 import meta from '../dan-edits-these/meta.json'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 export interface Props {
 	title?: string
 	description?: string
+	router: SingletonRouter
 }
 
 const Head: React.FC<Props> = ({
@@ -13,7 +14,7 @@ const Head: React.FC<Props> = ({
 	title = router.pathname.substr(1),
 	description = meta.description.default,
 	children,
-} = {}) => (
+}) => (
 	<>
 		<NextHead>
 			<meta httpEquiv="X-UA-Compatible" content="IE=edge" />

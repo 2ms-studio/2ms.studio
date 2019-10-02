@@ -11,12 +11,12 @@
         "id": "dt_press_shot_sq_02",
         "ratio": 1
     },
-    "images/gold_panda_good_luck.jpg": {
-        "id": "gold_panda_good_luck",
-        "ratio": 1
-    },
     "images/east_india_youth_culture_ofvolume.jpg": {
         "id": "east_india_youth_culture_ofvolume",
+        "ratio": 1
+    },
+    "images/gold_panda_good_luck.jpg": {
+        "id": "gold_panda_good_luck",
         "ratio": 1
     },
     "images/gold_panda_kigndom.jpg": {
