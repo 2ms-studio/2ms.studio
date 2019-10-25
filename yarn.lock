@@ -4553,12 +4553,12 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-next-size@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/next-size/-/next-size-2.0.2.tgz#aa574ac5f17c0cf6f143fdfd9506f4c75d64bbf9"
-  integrity sha512-EF/5qTBkHOyRYa7WV+W5NUTWC1+6wvGtbPeEpZyRIAv1eRL7gxxyMNz5os6LWytziBN4iNN10rouG9zlEbU5LQ==
+next-size@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/next-size/-/next-size-2.1.0.tgz#d6caa5506db0950d6e61701f9fa8237f39335ee2"
+  integrity sha512-IrL5hHgHFJ3OxtgAMJZLESUcvQ4QM9b22iqpigDB32EKUDUsCG93EWAYa+LaAxt+0appz1RdOjbNCBKVet9V3A==
   dependencies:
-    chalk "^2.4.1"
+    chalk "^2.4.2"
 
 next@^9.0.7:
   version "9.0.7"
