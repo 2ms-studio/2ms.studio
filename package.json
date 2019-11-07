@@ -30,7 +30,7 @@
 		"yarn": "^1.15.2"
 	},
 	"devDependencies": {
-		"@types/next": "8.0.6",
+		"@types/next": "8.0.7",
 		"@types/styled-jsx": "2.2.8",
 		"@typescript-eslint/eslint-plugin": "2.6.1",
 		"@typescript-eslint/parser": "2.6.1",
