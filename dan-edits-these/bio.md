@@ -1,6 +1,6 @@
 ## Collaborations and commissions include: 
 
-Baba Ali, Blanck Mass, Border Community, City Slang, Dollop, East India Youth, Errors Factory, Floor Girls Names, Gold Panda, Hot 8 Brass Band, Hyetal, I Break Horses, James Holden & The Animal Spirits, Jon Hopkins, Live Footage, Luke Abbott, Martin Duffy, Midland, Nathan Fake, Perc, Pictish Trail, Salmon Universe, Sam Willis, Sister Bliss (Faithless), Sky Larkin, The Charlatans, Tim Burgess, Times New Viking, TOY, Trunk Records, Vonica, Walls, Will Dutta, XL Recordings
+Baba Ali, Blanck Mass, Border Community, City Slang, Dollop, East India Youth, Errors Factory Floor, Girls Names, Gold Panda, Hot 8 Brass Band, Hyetal, I Break Horses, James Holden & The Animal Spirits, Jon Hopkins, Live Footage, Luke Abbott, Martin Duffy, Midland, Nathan Fake, Perc, Pictish Trail, Salmon Universe, Sam Willis, Sister Bliss (Faithless), Sky Larkin, The Charlatans, Tim Burgess, Times New Viking, TOY, Trunk Records, Vonica, Walls, Will Dutta, XL Recordings
 
 
 
