@@ -1,4 +1,4 @@
-import NextApp, { Container } from 'next/app'
+import NextApp from 'next/app'
 import Router from 'next/router'
 import Canvas from '../components/Canvas'
 import Head from '../components/Head'
@@ -23,26 +23,25 @@ export default class App extends NextApp {
 					`}</style>
 				</div>
 
-				<Container>
-					<nav>
-						<Nav />
-						<style jsx>{`
+				<nav>
+					<Nav />
+					<style jsx>{`
+						nav {
+							position: ${router.pathname === '/' ? 'fixed' : 'relative'};
+							z-index: 15;
+							width: 150px;
+							margin-bottom: 10px;
+						}
+						@media (min-width: 640px) {
 							nav {
-								position: ${router.pathname === '/' ? 'fixed' : 'relative'};
-								z-index: 15;
-								width: 150px;
-								margin-bottom: 10px;
+								position: fixed;
 							}
-							@media (min-width: 640px) {
-								nav {
-									position: fixed;
-								}
-							}
-						`}</style>
-					</nav>
-					<div>
-						<Component {...pageProps} />
-						<style jsx>{`
+						}
+					`}</style>
+				</nav>
+				<div>
+					<Component {...pageProps} />
+					<style jsx>{`
 							div {
 								margin-top: ${router.pathname === '/' ? 0 : 10};px;
 								z-index: 10;
@@ -64,8 +63,7 @@ export default class App extends NextApp {
 								}
 							}
 						`}</style>
-					</div>
-				</Container>
+				</div>
 			</>
 		)
 	}
