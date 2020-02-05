@@ -42,6 +42,6 @@
 		"react-player": "1.15.2",
 		"typescript": "3.7.5",
 		"webpack": "4.41.5",
-		"yarn": "1.21.1"
+		"yarn": "1.22.0"
 	}
 }
