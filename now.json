@@ -3,7 +3,9 @@
 	"version": 2,
 	"builds": [{ "src": "package.json", "use": "@now/static-build" }],
 	"alias": ["www.2ms.studio"],
-	"env": {
-		"CLOUDINARY_URL": "@cloudinary_url"
+	"build": {
+		"env": {
+			"CLOUDINARY_URL": "@cloudinary_url"
+		}
 	}
 }
