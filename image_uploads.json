@@ -31,6 +31,10 @@
         "id": "hard_islands",
         "ratio": 1
     },
+    "images/jh_scenesuspended_fin.jpg": {
+        "id": "jh_scenesuspended_fin",
+        "ratio": 1
+    },
     "images/live_footage_viewsofdesert.jpg": {
         "id": "live_footage_viewsofdesert",
         "ratio": 1
