@@ -1,7 +1,6 @@
 {
 	"name": "2MS",
 	"version": 2,
-	"builds": [{ "src": "package.json", "use": "@now/static-build" }],
 	"alias": ["www.2ms.studio"],
 	"build": {
 		"env": {
