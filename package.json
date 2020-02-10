@@ -11,7 +11,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "next build",
 		"start": "next start",
-		"now-build": "yarn lint && make upload && next build"
+		"now-build": "make upload && next build"
 	},
 	"keywords": [],
 	"author": "",
