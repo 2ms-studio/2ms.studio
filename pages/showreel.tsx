@@ -6,7 +6,6 @@ const ShowReel: React.FC = () => (
 			{/* hide the page from search engine results */}
 			<meta name="robots" content="noindex" />
 		</Head>
-		<h1>Dan Tombs Showreel, 2018</h1>
 		<div>
 			<iframe
 				src="https://player.vimeo.com/video/309567641?color=fff&title=0&byline=0&portrait=0"

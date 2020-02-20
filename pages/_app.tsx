@@ -29,12 +29,12 @@ export default class App extends NextApp {
 						nav {
 							position: ${router.pathname === '/' ? 'fixed' : 'relative'};
 							z-index: 15;
-							width: 150px;
 							margin-bottom: 10px;
 						}
 						@media (min-width: 640px) {
 							nav {
 								position: fixed;
+								width: 150px;
 							}
 						}
 					`}</style>
