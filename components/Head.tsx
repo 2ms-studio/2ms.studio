@@ -1,5 +1,6 @@
 import NextHead from 'next/head'
 import { SingletonRouter, withRouter } from 'next/router'
+import collaborators from '../dan-edits-these/collaborators.json'
 import meta from '../dan-edits-these/meta.json'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
@@ -12,16 +13,16 @@ export interface Props {
 const Head: React.FC<Props> = ({
 	router,
 	title = router.pathname.substr(1),
-	description = meta.description.default,
+	description = meta.description.default +
+		' for ' +
+		collaborators.sort().join(', ') +
+		'.',
 	children,
 }) => (
 	<>
 		<NextHead>
 			<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-			<meta
-				name="viewport"
-				content="width=device-width, initial-scale=1, maximum-scale=1"
-			/>
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<meta charSet="utf-8" />
 			<meta name="description" content={description} />
 			<title>{['2MS', title].filter(Boolean).join(' · ')}</title>

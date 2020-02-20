@@ -1,7 +1,7 @@
 import Head from '../components/Head'
 
 const ShowReel: React.FC = () => (
-	<>
+	<article>
 		<Head title="Dan Tombs Showreel">
 			{/* hide the page from search engine results */}
 			<meta name="robots" content="noindex" />
@@ -29,7 +29,7 @@ const ShowReel: React.FC = () => (
 			}
 		`}</style>
 		<script src="https://player.vimeo.com/api/player.js" />
-	</>
+	</article>
 )
 
 export default ShowReel
