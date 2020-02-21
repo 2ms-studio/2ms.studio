@@ -25,20 +25,8 @@ const Nav: React.FC = () => (
 			ul {
 				list-style: none;
 				padding: 0;
-				column-count: 1;
 			}
 
-			@media (min-width: 320px) {
-				ul {
-					column-count: 2;
-				}
-			}
-
-			@media (min-width: 640px) {
-				ul {
-					column-count: 1;
-				}
-			}
 			li {
 				margin: 0;
 			}
