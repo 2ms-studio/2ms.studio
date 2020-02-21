@@ -56,6 +56,8 @@ const Head: React.FC<Props> = ({
 
 		<meta property="og:type" content="website" />
 
+		<link rel="canonical" href={`https://www.2ms.studio${router.asPath}`} />
+
 		{children}
 
 		{/* Global Site Tag (gtag.js) - Google Analytics */}
