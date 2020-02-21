@@ -8,7 +8,6 @@ const Bio: React.FC = () => (
 	<article>
 		<Head title="Dan Tombs’ Bio" description={meta.description.bio} />
 		<RGBSplit>
-			<h1>Dan Tombs Bio, 2018</h1>
 			<section>
 				<h2>Collaborations and commissions</h2>
 				<ul>
@@ -31,16 +30,6 @@ const Bio: React.FC = () => (
 				padding: 0 10px;
 			}
 
-			h1 {
-				text-align: center;
-				font-size: 200%;
-				font-weight: 300;
-				margin-bottom: 0;
-				position: relative;
-				letter-spacing: -0.01em;
-				display: none;
-			}
-
 			@media (min-width: 640px) {
 				h1 {
 					display: block;
@@ -51,10 +40,17 @@ const Bio: React.FC = () => (
 				text-align: center;
 				font-weight: 300;
 				padding-top: 15px;
-				margin-bottom: 15px;
+				margin-bottom: 1em;
 				position: relative;
-				letter-spacing: 0.03em;
-				font-size: 14px;
+				letter-spacing: -0.01em;
+				font-size: 150%;
+				line-height: 1;
+			}
+
+			@media (min-width: 640px) {
+				article :global(h2) {
+					font-size: 200%;
+				}
 			}
 
 			article :global(p) {

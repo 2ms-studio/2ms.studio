@@ -6,5 +6,6 @@
 		"env": {
 			"CLOUDINARY_URL": "@cloudinary_url"
 		}
-	}
+	},
+	"redirects": [{ "source": "/bio", "destination": "/about" }]
 }
