@@ -69,7 +69,9 @@ const Canvas: React.FC = () => {
 		}
 	}, [])
 
-	return <canvas ref={ref} width={width} height={height}></canvas>
+	return (
+		<canvas ref={ref} width={width} height={height} aria-hidden={true}></canvas>
+	)
 }
 
 export default Canvas
