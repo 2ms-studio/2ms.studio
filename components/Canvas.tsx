@@ -70,20 +70,7 @@ const Canvas: React.FC = () => {
 	}, [])
 
 	return (
-		<>
-			<canvas ref={ref} width={width} height={height} />
-			<style jsx>{`
-				canvas {
-					position: fixed;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-					pointer-events: none;
-					overflow: hidden;
-				}
-			`}</style>
-		</>
+		<canvas ref={ref} width={width} height={height} aria-hidden={true}></canvas>
 	)
 }
 

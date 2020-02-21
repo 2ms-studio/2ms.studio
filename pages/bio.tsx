@@ -1,60 +1,112 @@
 import Head from '../components/Head'
 import RGBSplit from '../components/RGBSplit'
 import BioContent from '../dan-edits-these/bio.md'
+import collaborators from '../dan-edits-these/collaborators.json'
 import meta from '../dan-edits-these/meta.json'
 
 const Bio: React.FC = () => (
-	<div>
+	<article>
 		<Head title="Dan Tombs’ Bio" description={meta.description.bio} />
 		<RGBSplit>
-			<BioContent />
+			<h1>Dan Tombs Bio, 2018</h1>
+			<section>
+				<h2>Collaborations and commissions</h2>
+				<ul>
+					{collaborators.sort().map(collaborator => (
+						<li key={collaborator}>{collaborator}</li>
+					))}
+				</ul>
+			</section>
+			<section>
+				<BioContent />
+			</section>
 		</RGBSplit>
 
 		<style jsx>{`
-			div {
+			article {
 				position: relative;
 				z-index: 10;
 				text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 				background-color: rgba(0, 0, 0, 0.4);
 				padding: 0 10px;
 			}
-			div :global(h1) {
+
+			h1 {
 				text-align: center;
 				font-size: 200%;
 				font-weight: 300;
 				margin-bottom: 0;
 				position: relative;
+				letter-spacing: -0.01em;
+				display: none;
 			}
-			div :global(h2) {
+
+			@media (min-width: 640px) {
+				h1 {
+					display: block;
+				}
+			}
+
+			article :global(h2) {
 				text-align: center;
-				font-weight: 100;
-				font-size: 87.5%;
+				font-weight: 300;
+				padding-top: 15px;
 				margin-bottom: 15px;
-				padding-bottom: 0.2em;
 				position: relative;
+				letter-spacing: 0.03em;
+				font-size: 14px;
 			}
-			div :global(p) {
+
+			article :global(p) {
 				display: inline;
 				padding: 3px 0 4px;
 				position: relative;
-				font-weight: 200;
+				font-weight: 300;
 			}
 
-			div :global(p + p::before) {
+			article :global(p + p::before) {
 				display: block;
 				content: '';
 				clear: both;
 				height: 15px;
 			}
-			div :global(p:first-of-type) {
+
+			article :global(p:first-of-type) {
 				text-indent: 0;
 			}
-			div :global(em:first-child) {
+
+			article :global(em:first-child) {
 				text-transform: uppercase;
 				font-style: normal;
 			}
+
+			ul {
+				column-count: 1;
+				padding-bottom: 1rem;
+			}
+
+			@media (min-width: 320px) {
+				ul {
+					column-count: 2;
+				}
+			}
+
+			li {
+				position: relative;
+				font-weight: 200;
+				margin-bottom: 0.3em;
+				list-style: none;
+				line-height: 1.3;
+				font-size: 75%;
+				font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+				text-transform: uppercase;
+			}
+
+			li:before {
+				content: '> ';
+			}
 		`}</style>
-	</div>
+	</article>
 )
 
 export default Bio
