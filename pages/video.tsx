@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player'
 import videos from '../dan-edits-these/videos.json'
 
 const Video: React.FC = () => (
-	<article>
+	<>
 		{videos.map(video => (
 			<div className="wrapper" key={video}>
 				<LazyLoad once offset={100}>
@@ -18,16 +18,13 @@ const Video: React.FC = () => (
 			</div>
 		))}
 		<style jsx>{`
-			div {
-				position: relative;
-				z-index: 15;
-			}
 			.wrapper {
 				position: relative;
 				padding-top: 56.25%;
+				box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
 			}
 			.wrapper + .wrapper {
-				border-top: 15px dotted rgba(0, 0, 0, 0.6);
+				margin-top: 20px;
 			}
 
 			.wrapper :global(.player) {
@@ -36,7 +33,7 @@ const Video: React.FC = () => (
 				left: 0;
 			}
 		`}</style>
-	</article>
+	</>
 )
 
 export default Video

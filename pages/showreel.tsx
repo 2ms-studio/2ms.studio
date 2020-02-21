@@ -1,18 +1,18 @@
 import Head from '../components/Head'
 
 const ShowReel: React.FC = () => (
-	<article>
+	<div>
 		<Head title="Dan Tombs Showreel">
 			{/* hide the page from search engine results */}
 			<meta name="robots" content="noindex" />
 		</Head>
-		<div>
-			<iframe
-				src="https://player.vimeo.com/video/309567641?color=fff&title=0&byline=0&portrait=0"
-				frameBorder="0"
-				allowFullScreen={true}
-			/>
-		</div>
+
+		<iframe
+			src="https://player.vimeo.com/video/309567641?color=fff&title=0&byline=0&portrait=0"
+			frameBorder="0"
+			allowFullScreen={true}
+		/>
+
 		<style jsx>{`
 			div {
 				padding: 56.25% 0 0 0;
@@ -28,7 +28,7 @@ const ShowReel: React.FC = () => (
 			}
 		`}</style>
 		<script src="https://player.vimeo.com/api/player.js" />
-	</article>
+	</div>
 )
 
 export default ShowReel

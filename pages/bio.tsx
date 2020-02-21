@@ -9,13 +9,17 @@ const Bio: React.FC = () => (
 		<Head title="Dan Tombs’ Bio" description={meta.description.bio} />
 		<RGBSplit>
 			<h1>Dan Tombs Bio, 2018</h1>
-			<h2>Collaborations and commissions</h2>
-			<ul>
-				{collaborators.sort().map(collaborator => (
-					<li key={collaborator}>{collaborator}</li>
-				))}
-			</ul>
-			<BioContent />
+			<section>
+				<h2>Collaborations and commissions</h2>
+				<ul>
+					{collaborators.sort().map(collaborator => (
+						<li key={collaborator}>{collaborator}</li>
+					))}
+				</ul>
+			</section>
+			<section>
+				<BioContent />
+			</section>
 		</RGBSplit>
 
 		<style jsx>{`
@@ -26,22 +30,33 @@ const Bio: React.FC = () => (
 				background-color: rgba(0, 0, 0, 0.4);
 				padding: 0 10px;
 			}
-			article :global(h1) {
+
+			h1 {
 				text-align: center;
 				font-size: 200%;
 				font-weight: 300;
 				margin-bottom: 0;
 				position: relative;
 				letter-spacing: -0.01em;
+				display: none;
 			}
+
+			@media (min-width: 640px) {
+				h1 {
+					display: block;
+				}
+			}
+
 			article :global(h2) {
 				text-align: center;
 				font-weight: 300;
+				padding-top: 15px;
 				margin-bottom: 15px;
 				position: relative;
 				letter-spacing: 0.03em;
 				font-size: 14px;
 			}
+
 			article :global(p) {
 				display: inline;
 				padding: 3px 0 4px;
@@ -55,18 +70,28 @@ const Bio: React.FC = () => (
 				clear: both;
 				height: 15px;
 			}
+
 			article :global(p:first-of-type) {
 				text-indent: 0;
 			}
+
 			article :global(em:first-child) {
 				text-transform: uppercase;
 				font-style: normal;
 			}
-			article :global(ul) {
-				column-count: 2;
+
+			ul {
+				column-count: 1;
 				padding-bottom: 1rem;
 			}
-			article :global(li) {
+
+			@media (min-width: 320px) {
+				ul {
+					column-count: 2;
+				}
+			}
+
+			li {
 				position: relative;
 				font-weight: 200;
 				margin-bottom: 0.3em;
@@ -76,7 +101,8 @@ const Bio: React.FC = () => (
 				font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 				text-transform: uppercase;
 			}
-			article :global(li:before) {
+
+			li:before {
 				content: '> ';
 			}
 		`}</style>

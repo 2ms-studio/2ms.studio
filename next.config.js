@@ -10,6 +10,7 @@ module.exports = withSize(
 		},
 		pageExtensions: ['tsx', 'md', 'mdx'],
 		webpack(config) {
+			// preact stuff
 			const splitChunks = config.optimization && config.optimization.splitChunks
 			if (splitChunks) {
 				const cacheGroups = splitChunks.cacheGroups

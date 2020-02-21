@@ -2,7 +2,7 @@ import ContactLink from '../components/ContactLink'
 import ContactItems from '../dan-edits-these/contact.mdx'
 
 const Contact: React.FC = () => (
-	<article>
+	<>
 		<dl>
 			<ContactItems />
 			<ContactLink title="Website by" href="https://sndrs.dev">
@@ -24,7 +24,7 @@ const Contact: React.FC = () => (
 				background-blend-mode: multiply;
 			}
 		`}</style>
-	</article>
+	</>
 )
 
 export default Contact
