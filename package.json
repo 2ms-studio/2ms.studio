@@ -34,7 +34,7 @@
 		"eslint-plugin-react-hooks": "2.5.0",
 		"globby": "11.0.0",
 		"mkdirp": "1.0.3",
-		"next": "9.2.2",
+		"next": "9.3.0",
 		"next-size": "2.1.0",
 		"preact": "10.3.3",
 		"preact-render-to-string": "5.1.4",
