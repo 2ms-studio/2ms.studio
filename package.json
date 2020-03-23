@@ -38,7 +38,7 @@
 		"next-size": "2.1.0",
 		"preact": "10.3.4",
 		"preact-render-to-string": "5.1.4",
-		"prettier": "1.19.1",
+		"prettier": "2.0.2",
 		"react": "github:preact-compat/react#1.0.0",
 		"react-dom": "github:preact-compat/react-dom#1.0.0",
 		"react-lazyload": "2.6.5",
