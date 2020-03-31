@@ -38,6 +38,7 @@
 		"mkdirp": "1.0.3",
 		"next": "9.3.3",
 		"next-size": "2.1.0",
+		"next-svgr": "0.0.2",
 		"preact": "10.3.4",
 		"preact-render-to-string": "5.1.4",
 		"prettier": "2.0.2",

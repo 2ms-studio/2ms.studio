@@ -1,9 +1,12 @@
+import Logo from '../2MS.svg'
 import NavLink from './NavLink'
 
 const Nav: React.FC = () => (
 	<ul>
 		<li className="logo">
-			<NavLink href="/">2MS</NavLink>
+			<NavLink href="/">
+				<Logo style={{ fill: 'white', height: 40, width: 'auto' }} />
+			</NavLink>
 		</li>
 		<li>
 			<NavLink href="/video">video</NavLink>
