@@ -8,6 +8,11 @@ const Item: React.FC = ({ children }) => (
 			section {
 				padding-top: 1rem;
 			}
+			section + section {
+				padding-top: 1rem;
+				margin-top: 2rem;
+				border-top: 1px dashed black;
+			}
 		`}</style>
 	</section>
 )
@@ -18,7 +23,7 @@ const Title: React.FC<{ total: number }> = ({ total, children, ...props }) => (
 		<style jsx>{`
 			h2 {
 				font-size: 2rem;
-				line-height: 1.5;
+				line-height: 1.1;
 				padding-top: 0.8rem;
 				padding-bottom: 1rem;
 				margin: 0;
@@ -29,6 +34,7 @@ const Title: React.FC<{ total: number }> = ({ total, children, ...props }) => (
 				font-size: 11px;
 				font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 				display: block;
+				padding-top: 1.1rem;
 			}
 		`}</style>
 	</h2>
@@ -54,9 +60,9 @@ const Inventory: React.FC<{
 	<ul>
 		{props.inventory.map((invItem) => (
 			<li key={invItem.description}>
-				{invItem.description}{' '}
+				{invItem.description}
 				<span>
-					{invItem.total - invItem.remaining}/{invItem.total} sold
+					{invItem.remaining}/{invItem.total}
 				</span>
 			</li>
 		))}
@@ -69,8 +75,8 @@ const Inventory: React.FC<{
 			}
 			span {
 				font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-				font-size: 12px;
-				padding-left: 2ch;
+				font-size: 10px;
+				padding-left: 1ch;
 			}
 		`}</style>
 	</ul>
@@ -99,7 +105,7 @@ const Shop = () => (
 				<Image src={item.image} width={468} />
 				<Description description={item.description} />
 				<dl>
-					<dt>medium</dt>
+					<dt>media</dt>
 					<dd>{item.medium}</dd>
 					<dt>dimensions</dt>
 					<dd>{item.dimensions}</dd>
