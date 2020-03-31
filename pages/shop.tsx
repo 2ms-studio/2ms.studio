@@ -122,7 +122,7 @@ const Shop = () => (
 
 		<style jsx>{`
 			div {
-				background-color: white;
+				background-color: #ccc;
 				color: black;
 				padding: 1rem;
 				font-family: serif;
