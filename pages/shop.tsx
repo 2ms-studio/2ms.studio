@@ -112,7 +112,7 @@ const Shop = () => (
 					<dd>{item.dimensions}</dd>
 					<dt>postage</dt>
 					<dd>{item.postage}</dd>
-					<dt>inventory</dt>
+					<dt>availability</dt>
 					<dd>
 						<Inventory inventory={item.inventory}></Inventory>
 					</dd>
