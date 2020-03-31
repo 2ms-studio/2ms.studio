@@ -24,5 +24,30 @@
 			}
 		],
 		"image": "images/shop.kingdom.jpg"
+	},
+	{
+		"title": "Good Luck and Do Your Best  Luck and Do Your Best 01",
+		"description": [
+			"Image used on the inner sleeve for Gold Panda's Good Luck and Do Your Best album released in 2016.",
+			"This is a studio shoot, with the cover image projected through a stack of defective optical glass cubes, intended to echo the layout of the MPC sampler Gold Panda uses on the album.",
+			"First 5 prints sold are signed and numbered by Gold Panda and Dan Tombs, further prints are signed and numbered by Dan Tombs."
+		],
+		"dimensions": "12.0\" × 12.0\" (305mm × 305mm)",
+		"medium": "C-Type Fuji Matt. (231 GSM) Fuji Crystal archive paper with a semi-matt finish. The paper is coated with a slightly stippled texture giving a very natural photographic finish and maintains colours in a very natural way, giving a detailed, 3-dimensional beautiful photographic reproduction.",
+		"price": "£35",
+		"postage": "Cost price and shipped in a card record mailer",
+		"inventory": [
+			{
+				"description": "Signed by GP+DT",
+				"total": 5,
+				"remaining": 5
+			},
+			{
+				"description": "Signed by DT",
+				"total": 35,
+				"remaining": 35
+			}
+		],
+		"image": "images/shop.goodluckanddoyourbest01.jpg"
 	}
 ]
