@@ -89,7 +89,7 @@ const Shop = () => (
 		<h2>Original photography by Dan Tombs</h2>
 		<aside>
 			<p>
-				To order, email <a href="mailto:info@2ms.tv">info@2ms.tv</a> with your
+				To order, email <a href="mailto:dan@2ms.tv">dan@2ms.tv</a> with your
 				choice of image and your shipping address.
 			</p>
 			<p>
