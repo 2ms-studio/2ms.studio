@@ -106,12 +106,14 @@ const Shop = () => (
 				<Image src={item.image} width={468} />
 				<Description description={item.description} />
 				<dl>
+					<dt>price</dt>
+					<dd>{item.price}</dd>
+					<dt>postage</dt>
+					<dd>{item.postage}</dd>
 					<dt>media</dt>
 					<dd>{item.medium}</dd>
 					<dt>dimensions</dt>
 					<dd>{item.dimensions}</dd>
-					<dt>postage</dt>
-					<dd>{item.postage}</dd>
 					<dt>availability</dt>
 					<dd>
 						<Inventory inventory={item.inventory}></Inventory>
@@ -165,15 +167,6 @@ const Shop = () => (
 
 			dl {
 				// padding-top: 1rem;
-			}
-
-			// dt::before {
-			// 	content: '–';
-			// 	display: block;
-			// }
-
-			dt::after {
-				content: ':';
 			}
 
 			dt {
