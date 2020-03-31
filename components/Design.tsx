@@ -1,12 +1,4 @@
-import LazyLoad from 'react-lazyload'
-import imageURI from '../lib/imageURI'
-
-const uploads: {
-	[name: string]: {
-		id: string
-		ratio: number
-	}
-} = require('../image_uploads.json') // eslint-disable-line @typescript-eslint/no-var-requires
+import Image from './Image'
 
 interface Props {
 	images?: [string]
@@ -17,8 +9,6 @@ interface Props {
 	description?: string
 }
 
-const width = 500
-
 const DesignImage: React.FC<Props> = ({
 	images,
 	artist,
@@ -28,38 +18,7 @@ const DesignImage: React.FC<Props> = ({
 	description,
 }) => (
 	<section>
-		{images &&
-			images.map(src => (
-				<LazyLoad
-					key={src}
-					height={width * uploads[src].ratio}
-					once
-					offset={100}
-				>
-					<div
-						style={{
-							position: 'relative',
-							paddingTop: 100 * uploads[src].ratio + '%',
-						}}
-					>
-						<img
-							srcSet={[
-								`${imageURI({ src, width: 290 })} 320w`,
-								`${imageURI({ src, width: 345 })} 375w`,
-								`${imageURI({ src, width: 384 })} 414w`,
-								`${imageURI({ src, width: 500 })} 500w`,
-								`${imageURI({ src, width: 608 })} 639w`,
-								`${imageURI({ src, width: 690 })} 750w`,
-								`${imageURI({ src, width: 768 })} 828w`,
-								`${imageURI({ src, width: 1000 })} 1000w`,
-								`${imageURI({ src, width: 1216 })} 1278w`,
-							].join(',')}
-							sizes={`(max-width: 639px) 100vw, ${width}px`}
-							alt=""
-						/>
-					</div>
-				</LazyLoad>
-			))}
+		{images && images.map((src) => <Image src={src} key={src} />)}
 		<div className="info">
 			<h2 className="work">
 				<span className="artist">{artist}</span>
@@ -68,7 +27,6 @@ const DesignImage: React.FC<Props> = ({
 			{(client || date) && (
 				<h3 className="client">{[client, date].filter(Boolean).join(', ')}</h3>
 			)}
-
 			{description && <p className="description">&gt; {description}</p>}
 		</div>
 
@@ -85,14 +43,6 @@ const DesignImage: React.FC<Props> = ({
 				top: 0;
 				left: 0;
 			}
-			img {
-				display: block;
-				width: 100%;
-				height: auto;
-				position: absolute;
-				top: 0;
-			}
-
 			.work,
 			.client,
 			.date,

@@ -7,10 +7,10 @@ module.exports = withSize(
 	withMDX({
 		experimental: {
 			modern: true,
+			polyfillsOptimization: true,
 		},
 		pageExtensions: ['tsx', 'md', 'mdx'],
-		webpack(config) {
-			// preact stuff
+		webpack(config, { dev, isServer }) {
 			const splitChunks = config.optimization && config.optimization.splitChunks
 			if (splitChunks) {
 				const cacheGroups = splitChunks.cacheGroups
@@ -28,6 +28,19 @@ module.exports = withSize(
 					}
 				}
 			}
+
+			// inject Preact DevTools
+			if (dev && !isServer) {
+				const entry = config.entry
+				config.entry = () =>
+					entry().then((entries) => {
+						entries['main.js'] = ['preact/debug'].concat(
+							entries['main.js'] || [],
+						)
+						return entries
+					})
+			}
+
 			return config
 		},
 	}),

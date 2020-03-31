@@ -5,3 +5,4 @@ dist
 image_uploads.json
 
 .now
+.DS_Store

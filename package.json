@@ -1,16 +1,18 @@
 {
 	"name": "dantombs.net",
 	"engines": {
-		"node": "10.x"
+		"node": "12.x"
 	},
 	"version": "2.0.0",
 	"description": "",
 	"main": "pages/index.tsx",
+	"private": true,
 	"scripts": {
+		"dev": "next",
 		"lint": "eslint . --ext .js --ext .ts --ext .tsx",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "next build",
-		"start": "next start",
+		"start": "NODE_ENV=production next start",
 		"now-build": "make upload && next build"
 	},
 	"keywords": [],
@@ -31,14 +33,14 @@
 		"eslint-config-prettier": "6.10.1",
 		"eslint-plugin-prettier": "3.1.2",
 		"eslint-plugin-react": "7.19.0",
-		"eslint-plugin-react-hooks": "2.5.1",
+		"eslint-plugin-react-hooks": "3.0.0",
 		"globby": "11.0.0",
 		"mkdirp": "1.0.3",
 		"next": "9.3.3",
 		"next-size": "2.1.0",
 		"preact": "10.3.4",
 		"preact-render-to-string": "5.1.4",
-		"prettier": "1.19.1",
+		"prettier": "2.0.2",
 		"react": "github:preact-compat/react#1.0.0",
 		"react-dom": "github:preact-compat/react-dom#1.0.0",
 		"react-lazyload": "2.6.6",

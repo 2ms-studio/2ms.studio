@@ -12,6 +12,9 @@ const Nav: React.FC = () => (
 			<NavLink href="/design">design</NavLink>
 		</li>
 		<li>
+			<NavLink href="/shop">shop</NavLink>
+		</li>
+		<li>
 			<NavLink href="/about">about</NavLink>
 		</li>
 		<li>
