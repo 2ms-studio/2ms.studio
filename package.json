@@ -44,7 +44,7 @@
 		"prettier": "2.0.2",
 		"react": "github:preact-compat/react#1.0.0",
 		"react-dom": "github:preact-compat/react-dom#1.0.0",
-		"react-lazyload": "2.6.6",
+		"react-lazyload": "2.6.7",
 		"react-player": "1.15.3",
 		"react-ssr-prepass": "npm:preact-ssr-prepass@1.0.1",
 		"typescript": "3.8.3",
