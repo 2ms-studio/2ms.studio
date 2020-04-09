@@ -179,7 +179,6 @@ const Shop = () => (
 
 			dd {
 				font-family: serif;
-				font-size: 14px;
 				line-height: 1.3;
 			}
 		`}</style>
