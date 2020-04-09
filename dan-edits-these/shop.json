@@ -1,5 +1,29 @@
 [
 	{
+		"title": "Hard Islands",
+		"description": [
+			"Image used on the sleeve for Nathan Fake's Hard Islands Album released in 2009 on Border Community.",
+			"Taken one winter morning in 2008 on the beach at Happisburgh, Norfolk. The area is known for rapid coastal errosion and this is clearly the remains of someones home that has fallen down the cliff",
+			"This is a scan of the orginal 35mm negative, and shows the whole frame wider than crop used for the LP sleeve, this image has never before been published",
+			"All prints sold are signed and numbered by Nathan Fake and Dan Tombs."
+		],
+		"dimensions": "12.0\" × 8.0\" (305mm × 204mm)",
+		"medium": "C-Type Fuji Matt. (231 GSM) Fuji Crystal archive paper with a semi-matt finish. The paper is coated with a slightly stippled texture giving a very natural photographic finish. Retains colours in a very natural way, offering a beautifully detailed, 3-dimensional photographic reproduction.",
+		"price": "£50",
+		"postage": "UK £3.50 (ask for international rates) shipped in a card record mailer",
+		"inventory": [
+			{
+				"description": "Signed by NF+DT",
+				"total": 30,
+				"remaining": 30
+			},
+			{
+			
+			}
+		],
+		"image": "images/shop.hard_islands.jpg"
+	},
+	{
 		"title": "Kingdom",
 		"description": [
 			"Image used on the sleeve for Gold Panda's Kingdom EP released in 2016.",
