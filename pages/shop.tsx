@@ -48,7 +48,6 @@ const Description: React.FC<{ description: string[] }> = ({ description }) => (
 		<style jsx>{`
 			p {
 				padding-top: 1rem;
-				font-style: italic;
 				line-height: 1.3;
 			}
 		`}</style>
@@ -180,7 +179,6 @@ const Shop = () => (
 
 			dd {
 				font-family: serif;
-				font-size: 14px;
 				line-height: 1.3;
 			}
 		`}</style>
