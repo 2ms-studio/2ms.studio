@@ -21,7 +21,7 @@
 	"dependencies": {
 		"@babel/core": "7.9.6",
 		"@mdx-js/mdx": "1.6.1",
-		"@types/node": "13.13.5",
+		"@types/node": "14.0.1",
 		"@types/react-lazyload": "2.6.0",
 		"@types/styled-jsx": "2.2.8",
 		"@typescript-eslint/eslint-plugin": "2.34.0",
