@@ -47,7 +47,7 @@
 		"react-lazyload": "2.6.7",
 		"react-player": "1.15.3",
 		"react-ssr-prepass": "npm:preact-ssr-prepass@1.0.1",
-		"typescript": "3.9.2",
+		"typescript": "3.9.3",
 		"webpack": "4.43.0",
 		"yarn": "1.22.4"
 	}
