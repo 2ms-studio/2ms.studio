@@ -19,7 +19,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@babel/core": "7.10.0",
+		"@babel/core": "7.10.1",
 		"@mdx-js/mdx": "1.6.4",
 		"@types/node": "13.13.5",
 		"@types/react-lazyload": "2.6.0",
