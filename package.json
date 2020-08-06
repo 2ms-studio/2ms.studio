@@ -45,7 +45,7 @@
 		"react": "github:preact-compat/react#1.0.0",
 		"react-dom": "github:preact-compat/react-dom#1.0.0",
 		"react-lazyload": "2.6.9",
-		"react-player": "1.15.3",
+		"react-player": "2.6.0",
 		"react-ssr-prepass": "npm:preact-ssr-prepass@1.0.1",
 		"typescript": "3.9.7",
 		"webpack": "4.44.1",
