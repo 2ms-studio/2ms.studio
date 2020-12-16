@@ -5944,10 +5944,10 @@ react-lazyload@3.1.0:
   resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-3.1.0.tgz#2d2b172ede29f0a72dc4b329af6f1626ffd637d2"
   integrity sha512-WNkWS2jlLnAud2uEqi/Ud4TEjzOQzsN97NzbeRodB9k0TepnoadXDU2bee3PvfP3vpbepsZ716FjSb+xS1W4UQ==
 
-react-player@2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/react-player/-/react-player-2.7.0.tgz#7f25c83b6111770adbae51679f7ad27fb0fa0269"
-  integrity sha512-S+d9EfFCb2UlDBKf5U8jTgVQI3QCRfZ8k7kFUgpYLrSjLuowdV/NyZAKprplUNJEho1LmdwtqsDKg21kMIVymw==
+react-player@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/react-player/-/react-player-2.7.1.tgz#7f091637a3eee8c28872b4c60a33d3d2a554438c"
+  integrity sha512-aMsRcABX7bOMFol8lDsOxxdsCEGVCUI63JojPjONOzp5KavzZlWtfkfSzCLjPiRjlz+eb3/6lUUb5oZzyFjpWw==
   dependencies:
     deepmerge "^4.0.0"
     load-script "^1.0.0"
