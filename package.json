@@ -34,7 +34,7 @@
 		"eslint-plugin-prettier": "3.3.1",
 		"eslint-plugin-react": "7.22.0",
 		"eslint-plugin-react-hooks": "4.2.0",
-		"globby": "11.0.1",
+		"globby": "11.0.2",
 		"mkdirp": "1.0.4",
 		"next": "10.0.4",
 		"next-size": "2.1.0",
