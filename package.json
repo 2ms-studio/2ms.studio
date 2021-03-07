@@ -40,7 +40,7 @@
 		"next-size": "2.1.0",
 		"next-svgr": "0.0.2",
 		"preact": "10.5.12",
-		"preact-render-to-string": "5.1.12",
+		"preact-render-to-string": "5.1.13",
 		"prettier": "2.2.1",
 		"react": "github:preact-compat/react#1.0.0",
 		"react-dom": "github:preact-compat/react-dom#1.0.0",
