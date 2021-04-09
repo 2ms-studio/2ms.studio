@@ -48,7 +48,7 @@
 		"react-player": "2.9.0",
 		"react-ssr-prepass": "npm:preact-ssr-prepass@1.1.2",
 		"typescript": "4.2.4",
-		"webpack": "5.31.0",
+		"webpack": "5.31.1",
 		"yarn": "1.22.10"
 	}
 }
