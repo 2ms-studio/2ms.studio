@@ -29,7 +29,7 @@
 		"@zeit/next-mdx": "1.2.0",
 		"cloudinary": "1.25.1",
 		"dotenv": "8.2.0",
-		"eslint": "7.24.0",
+		"eslint": "7.25.0",
 		"eslint-config-prettier": "6.15.0",
 		"eslint-plugin-prettier": "3.4.0",
 		"eslint-plugin-react": "7.23.2",
