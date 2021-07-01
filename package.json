@@ -39,7 +39,7 @@
 		"next": "10.2.3",
 		"next-size": "2.1.0",
 		"next-svgr": "0.0.2",
-		"preact": "10.5.13",
+		"preact": "10.5.14",
 		"preact-render-to-string": "5.1.19",
 		"prettier": "2.3.2",
 		"react": "github:preact-compat/react#1.0.0",
