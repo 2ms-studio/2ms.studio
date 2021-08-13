@@ -1,10 +1,10 @@
-_I’m a music-industry artist,_ with a strong focus on creating live visuals, installations, and videos that bring music to life for audiences all around the world. 
+_I’m a music-industry artist, with a strong focus on creating live visuals, installations, and videos that bring music to life for audiences all around the world_ 
 
 As a creator of live visuals for gigs, festivals and global tours, I’ve worked with Jon Hopkins, Fred again.., Gold Panda, and Midland. From initial concepting to live VJ performances, AV coordination to lighting design, I can see a show through from start to finish – whatever the scale. Along every step, I work closely with performers to ensure that we extend the scope of their performance, and accentuate their work in all-new ways. 
 
 I’ve installed and performed at venues including the Sydney Opera House, Brixton Academy, the Royal Festival Hall, Berlin Funkhaus, Utrecht TivoliVredenburg and Brooklyn Steel. Festival work includes Coachella, Melt, Glastonbury (West Holts, Park and Glade stages), Fuji Rocks, Montreux Jazz, Primavera and Sonar. 
 
-As a music video director and producer, I’ve worked with Nathan Fake and Four Tet and Tim Burgess. I’m very comfortable working with musicians, artists, and brands to develop ideas and concepts that match their identity and vision – I know how musicians think, and bring that deep understanding to every project. 
+As a music video director and producer, I’ve worked with Nathan Fake, Four Tet and Tim Burgess. I’m very comfortable working with musicians, artists, and brands to develop ideas and concepts that match their identity and vision – I know how musicians think, and bring that deep understanding to every project. 
 
 As a photographer and designer, my work has been used on record sleeves and for press shots by artists and labels including City Slang, XL Recordings, Border Community and Notown. I’m also an educator, teaching BA courses in Film and Fine Art. 
 
@@ -24,6 +24,21 @@ I worked with art director and musician Steve Mackey (Pulp) to create a campaign
 
 Hello Moon, Can you Hear Me? (2016)
 Through working with Tim Burgess and The Charlatans, I got to meet Professor Tim O’Brien, a big fan of Manchester music and a radio astronomer at Jodrell Bank. He invited me to make a video using recordings from the radio telescope. It was a huge privilege to be given the audio files, and to spend some weeks visualising all these sounds from around our solar system. The project was presented live at Jodrell Bank, under the radio telescope, during their Blue Dot festival. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 _Interview with Ralph Moore (2018)_
 
