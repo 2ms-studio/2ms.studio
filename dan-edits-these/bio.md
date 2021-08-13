@@ -1,4 +1,31 @@
-## Interview with Ralph Moore
+I’m a music-industry artist, with a strong focus on creating live visuals, installations, and videos that bring music to life for audiences all around the world. 
+
+As a creator of live visuals for gigs, festivals and global tours, I’ve worked with Jon Hopkins, Fred again.., Gold Panda, and Midland. From initial concepting to live VJ performances, AV coordination to lighting design, I can see a show through from start to finish – whatever the scale. Along every step, I work closely with performers to ensure that we extend the scope of their performance, and accentuate their work in all-new ways. 
+
+I’ve installed and performed at venues including the Sydney Opera House, Brixton Academy, the Royal Festival Hall, Berlin Funkhaus, Utrecht TivoliVredenburg and Brooklyn Steel. Festival work includes Coachella, Melt, Glastonbury (West Holts, Park and Glade stages), Fuji Rocks, Montreux Jazz, Primavera and Sonar. 
+
+As a music video director and producer, I’ve worked with Nathan Fake and Four Tet and Tim Burgess. I’m very comfortable working with musicians, artists, and brands to develop ideas and concepts that match their identity and vision – I know how musicians think, and bring that deep understanding to every project. 
+
+As a photographer and designer, my work has been used on record sleeves and for press shots by artists and labels including City Slang, XL Recordings, Border Community and Notown. I’m also an educator, teaching BA courses in Film and Fine Art. 
+
+##My tech & techniques 
+
+I’m most happy creating experimental works that blend effects from vintage analogue equipment, cutting-edge digital tools, and recorded physical phenomenon such as water, oils and glass. I work in a process-intensive manner, iterating many generations of images through analogue video mixers and effects units, as well as contemporary modular video synthesisers. These signals are mixed and manipulated through software like VDMX, then recorded and edited and layered in Final Cut Pro. I also make use of After Effects, Photoshop, VUO, Lumen and Touch Designer to complete each piece. 
+
+When it comes to performance, I use audio software such as Ableton to create MIDI notes and synchronisation tools that mean musicians can feel free to improvise and modify a live performance, knowing that the visuals will be dynamically matched. VDMX has been my go to tool for live shows for over 15 years. For several years I’ve been invited by the VIDVOX team to Beta test new features for them. I also make use of Livid and Novation MIDI controllers, and rely on using a Roland HD video mixer for performance work too. 
+
+##A few career highlights 
+
+Jon Hopkins, Sydney Opera House (2020)
+For the Singularity tour, I collaborated with Jon to create and perform visuals for the entire show. I created bespoke work myself, directed other artists and animators, and designed the lighting system. The show evolved over a hectic schedule across Europe, Mexico, New Zealand, Australia,  Japan and the USA, and we constantly took it to another level, such as when I added a laser show into the mix (I love lasers). We then returned to Australia to share the show once last time, and performing at the Opera House, to a totally joyous crowd, was absolutely humbling. 
+
+FILA: 110-year anniversary (2021)
+I worked with art director and musician Steve Mackey (Pulp) to create a campaign for sports brand FILA. The concept was to show their latest sportswear collection against a backdrop of classic 8-bit sports video games, creating a themed fashion event. The brief allowed me to explore one of my favourite aesthetics and give it a hyper-contemporary feel. We also had to build a 30x7 meter LED corridor on a catwalk for the models to walk down. The public response to the finished promo video was extraordinary. 
+
+Hello Moon, Can you Hear Me? (2016)
+Through working with Tim Burgess and The Charlatans, I got to meet Professor Tim O’Brien, a big fan of Manchester music and a radio astronomer at Jodrell Bank. He invited me to make a video using recordings from the radio telescope. It was a huge privilege to be given the audio files, and to spend some weeks visualising all these sounds from around our solar system. The project was presented live at Jodrell Bank, under the radio telescope, during their Blue Dot festival. 
+
+## Interview with Ralph Moore (2018)
 
 _Visual artist, creator and curator_, Dan Tombs has a knack of being in the right place at the right time.
 
@@ -48,4 +75,4 @@ He dreams of working with New Order as well as Gareth Edwards, who directed Mons
 
 “The satisfaction is undeniable,” he says of his design work, which will soon end up as limited edition screen prints. Live video work is temporary, ephemeral, “So it has been really rewarding making record sleeves and seeing my work in racks all around the world. I’ve done fine art and gallery projects that feel worthy and intellectual but record sleeves are an unlimited edition object that enters peoples lives, the ability to make images that people have a long-standing relationship with is an area that interests me greatly.”
 
-Watch this (physical) space.
+
