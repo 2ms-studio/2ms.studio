@@ -1,4 +1,4 @@
-I’m a music-industry artist, with a strong focus on creating live visuals, installations, and videos that bring music to life for audiences all around the world. 
+_I’m a music-industry artist,_ with a strong focus on creating live visuals, installations, and videos that bring music to life for audiences all around the world. 
 
 As a creator of live visuals for gigs, festivals and global tours, I’ve worked with Jon Hopkins, Fred again.., Gold Panda, and Midland. From initial concepting to live VJ performances, AV coordination to lighting design, I can see a show through from start to finish – whatever the scale. Along every step, I work closely with performers to ensure that we extend the scope of their performance, and accentuate their work in all-new ways. 
 
@@ -25,9 +25,9 @@ I worked with art director and musician Steve Mackey (Pulp) to create a campaign
 Hello Moon, Can you Hear Me? (2016)
 Through working with Tim Burgess and The Charlatans, I got to meet Professor Tim O’Brien, a big fan of Manchester music and a radio astronomer at Jodrell Bank. He invited me to make a video using recordings from the radio telescope. It was a huge privilege to be given the audio files, and to spend some weeks visualising all these sounds from around our solar system. The project was presented live at Jodrell Bank, under the radio telescope, during their Blue Dot festival. 
 
-_## Interview with Ralph Moore (2018)_
+_Interview with Ralph Moore (2018)_
 
-_Visual artist, creator and curator_, Dan Tombs has a knack of being in the right place at the right time.
+Visual artist, creator and curator, Dan Tombs has a knack of being in the right place at the right time.
 
 As well as creating single and album sleeve artwork for the likes of Gold Panda, XL Recordings, Border Community and NOTOWN, he’s spent the past decade working as a solo artist and also a key collaborator for the likes of The Charlatans, James Holden, Gold Panda, Blanck Mass (“the work we did is an absolute horror show!“) and arguably his most fruitful collaboration alongside Jon Hopkins, now one of the biggest artists in the contemporary electronic space.
 
