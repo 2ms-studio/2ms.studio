@@ -8,13 +8,13 @@ As a music video director and producer, I’ve worked with Nathan Fake and Four 
 
 As a photographer and designer, my work has been used on record sleeves and for press shots by artists and labels including City Slang, XL Recordings, Border Community and Notown. I’m also an educator, teaching BA courses in Film and Fine Art. 
 
-##My tech & techniques 
+_My tech & techniques_
 
 I’m most happy creating experimental works that blend effects from vintage analogue equipment, cutting-edge digital tools, and recorded physical phenomenon such as water, oils and glass. I work in a process-intensive manner, iterating many generations of images through analogue video mixers and effects units, as well as contemporary modular video synthesisers. These signals are mixed and manipulated through software like VDMX, then recorded and edited and layered in Final Cut Pro. I also make use of After Effects, Photoshop, VUO, Lumen and Touch Designer to complete each piece. 
 
 When it comes to performance, I use audio software such as Ableton to create MIDI notes and synchronisation tools that mean musicians can feel free to improvise and modify a live performance, knowing that the visuals will be dynamically matched. VDMX has been my go to tool for live shows for over 15 years. For several years I’ve been invited by the VIDVOX team to Beta test new features for them. I also make use of Livid and Novation MIDI controllers, and rely on using a Roland HD video mixer for performance work too. 
 
-##A few career highlights 
+_A few career highlights_
 
 Jon Hopkins, Sydney Opera House (2020)
 For the Singularity tour, I collaborated with Jon to create and perform visuals for the entire show. I created bespoke work myself, directed other artists and animators, and designed the lighting system. The show evolved over a hectic schedule across Europe, Mexico, New Zealand, Australia,  Japan and the USA, and we constantly took it to another level, such as when I added a laser show into the mix (I love lasers). We then returned to Australia to share the show once last time, and performing at the Opera House, to a totally joyous crowd, was absolutely humbling. 
@@ -25,7 +25,7 @@ I worked with art director and musician Steve Mackey (Pulp) to create a campaign
 Hello Moon, Can you Hear Me? (2016)
 Through working with Tim Burgess and The Charlatans, I got to meet Professor Tim O’Brien, a big fan of Manchester music and a radio astronomer at Jodrell Bank. He invited me to make a video using recordings from the radio telescope. It was a huge privilege to be given the audio files, and to spend some weeks visualising all these sounds from around our solar system. The project was presented live at Jodrell Bank, under the radio telescope, during their Blue Dot festival. 
 
-## Interview with Ralph Moore (2018)
+_## Interview with Ralph Moore (2018)_
 
 _Visual artist, creator and curator_, Dan Tombs has a knack of being in the right place at the right time.
 
