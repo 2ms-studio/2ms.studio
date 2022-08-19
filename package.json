@@ -5,8 +5,10 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
+		"start": "NODE_ENV=production next start",
+		"now-build": "make upload && next build",
+		"lint": "next lint",
+		"upload-images": "node ./lib/image_upload.js"
 	},
 	"dependencies": {
 		"next": "12.2.5",
