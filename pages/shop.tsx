@@ -1,7 +1,11 @@
 import Image from '../components/Image'
 import items from '../dan-edits-these/shop.json'
 
-const Item: React.FC = ({ children }) => (
+interface Props {
+	children?: React.ReactNode
+}
+
+const Item = ({ children }: Props) => (
 	<section>
 		{children}
 		<style jsx>{`
@@ -17,7 +21,12 @@ const Item: React.FC = ({ children }) => (
 	</section>
 )
 
-const Title: React.FC<{ total: number }> = ({ total, children, ...props }) => (
+interface TitleProps {
+	total: number
+	children?: React.ReactNode
+}
+
+const Title = ({ total, children, ...props }: TitleProps) => (
 	<h2 {...props}>
 		{children} <span>edition of {total}</span>
 		<style jsx>{`
@@ -102,7 +111,7 @@ const Shop = () => (
 				<Title total={item.inventory.reduce((a, b) => a + b.total, 0)}>
 					{item.title}
 				</Title>
-				<Image src={item.image} width={468} />
+				<Image src={item.image} width={468} alt="" />
 				<Description description={item.description} />
 				<dl>
 					<dt>price</dt>

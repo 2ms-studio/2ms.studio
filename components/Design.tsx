@@ -18,7 +18,10 @@ const DesignImage: React.FC<Props> = ({
 	description,
 }) => (
 	<section>
-		{images && images.map((src) => <Image src={src} key={src} />)}
+		{images &&
+			images.map((src) => (
+				<Image src={src} key={src} alt={`Image of ${artist}’s ${title}`} />
+			))}
 		<div className="info">
 			<h2 className="work">
 				<span className="artist">{artist}</span>

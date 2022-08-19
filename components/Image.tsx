@@ -1,3 +1,4 @@
+import NextImage from 'next/image'
 import LazyLoad from 'react-lazyload'
 import imageURI from '../lib/imageURI'
 
@@ -6,11 +7,12 @@ const uploads: {
 		id: string
 		ratio: number
 	}
-} = require('../image_uploads.json') // eslint-disable-line @typescript-eslint/no-var-requires
+} = require('../image_uploads.json')
 
-const Image: React.FC<{ src: string; width?: number }> = ({
+const Image: React.FC<{ src: string; width?: number; alt?: string }> = ({
 	width = 500,
 	src,
+	alt = '',
 }) => (
 	<LazyLoad key={src} height={width * uploads[src].ratio} once offset={100}>
 		<div
@@ -18,20 +20,13 @@ const Image: React.FC<{ src: string; width?: number }> = ({
 				paddingTop: `${100 * uploads[src].ratio}%`,
 			}}
 		>
-			<img
-				srcSet={[
-					`${imageURI({ src, width: 290 })} 320w`,
-					`${imageURI({ src, width: 345 })} 375w`,
-					`${imageURI({ src, width: 384 })} 414w`,
-					`${imageURI({ src, width: 500 })} 500w`,
-					`${imageURI({ src, width: 608 })} 639w`,
-					`${imageURI({ src, width: 690 })} 750w`,
-					`${imageURI({ src, width: 768 })} 828w`,
-					`${imageURI({ src, width: 1000 })} 1000w`,
-					`${imageURI({ src, width: 1216 })} 1278w`,
-				].join(',')}
+			<NextImage
+				layout="fill"
+				width={width}
+				loader={imageURI}
+				src={src}
+				alt={alt}
 				sizes={`(max-width: 639px) 100vw, ${width}px`}
-				alt=""
 			/>
 		</div>
 		<style jsx>{`

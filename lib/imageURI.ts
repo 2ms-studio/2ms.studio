@@ -3,7 +3,9 @@ const uploads: {
 		id: string
 		ratio: number
 	}
-} = require('../image_uploads.json') // eslint-disable-line @typescript-eslint/no-var-requires
+} = require('../image_uploads.json')
 
-export default ({ width, src }: { width: number; src: string }) =>
+const imageURI = ({ width, src }: { width: number; src: string }) =>
 	`https://res.cloudinary.com/twoms/image/upload/f_auto,q_60,c_scale,w_${width}/${uploads[src].id}`
+
+export default imageURI
