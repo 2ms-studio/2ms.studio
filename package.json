@@ -6,7 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "NODE_ENV=production next start",
-		"now-build": "pnpm upload && next build",
+		"now-build": "pnpm upload-images && next build",
 		"lint": "next lint",
 		"upload-images": "node ./lib/image_upload.js"
 	},
