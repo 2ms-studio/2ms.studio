@@ -8,6 +8,7 @@ export interface Props {
 	title?: string
 	description?: string
 	router: SingletonRouter
+	children?: React.ReactNode
 }
 
 const Head: React.FC<Props> = ({

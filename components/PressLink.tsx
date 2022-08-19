@@ -1,6 +1,7 @@
 interface Props {
 	href: string
 	publication: string
+	children?: React.ReactNode
 }
 
 const PressLink: React.FC<Props> = ({ href, children, publication }) => (

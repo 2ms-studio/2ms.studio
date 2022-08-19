@@ -8,60 +8,60 @@ interface RGBSetting {
 	blue: number
 }
 
+type RGBSplitProps = {
+	children?: React.ReactNode
+}
+
 type XState = [RGBSetting, Dispatch<RGBSetting>]
 
 const peak = 15
 
-const RGBSplit: React.FC = ({ children }) => {
-	let min: RGBSetting = { red: 0, lime: 0, blue: 0 }
-	let max: RGBSetting = { red: 0, lime: 0, blue: 0 }
-	let offset: RGBSetting = { red: 0, lime: 0, blue: 0 }
-	let scrolling: number
-
+const RGBSplit = ({ children }: RGBSplitProps) => {
 	const [x, setX]: XState = useState({ red: 0, lime: 0, blue: 0 })
 	const [duration, setDuration] = useState(0)
 
 	const [splitIt, setSplit] = useState(false)
 
-	const getX = (colour: 'red' | 'lime' | 'blue') => {
-		const absMin = Math.abs(min[colour])
-		const freq = (absMin + max[colour]) / 2
-		return Math.round(
-			freq * Math.sin(window.scrollY * 0.01 + offset[colour]) + (absMin - freq),
-		)
-	}
-
-	const handleScroll = () => {
-		window.clearTimeout(scrolling)
-
-		scrolling = window.requestAnimationFrame(() => {
-			setDuration(250)
-			setX({ red: getX('red'), lime: getX('lime'), blue: getX('blue') })
-		})
-
-		scrolling = window.setTimeout(function() {
-			setDuration(350)
-			setX({ red: 0, lime: 0, blue: 0 })
-		}, 60)
-	}
-
 	useEffect(() => {
-		min = {
+		let min: RGBSetting = {
 			red: random(-peak, peak),
 			lime: random(-peak, peak),
 			blue: random(-peak, peak),
 		}
-		max = {
+		let max: RGBSetting = {
 			red: random(-peak, peak),
 			lime: random(-peak, peak),
 			blue: random(-peak, peak),
 		}
-		offset = {
+		let offset: RGBSetting = {
 			red: random(0, 5),
 			lime: random(0, 5),
 			blue: random(0, 5),
 		}
 
+		let scrolling: number
+
+		const getX = (colour: 'red' | 'lime' | 'blue') => {
+			const absMin = Math.abs(min[colour])
+			const freq = (absMin + max[colour]) / 2
+			return Math.round(
+				freq * Math.sin(window.scrollY * 0.01 + offset[colour]) +
+					(absMin - freq),
+			)
+		}
+		const handleScroll = () => {
+			window.clearTimeout(scrolling)
+
+			scrolling = window.requestAnimationFrame(() => {
+				setDuration(250)
+				setX({ red: getX('red'), lime: getX('lime'), blue: getX('blue') })
+			})
+
+			scrolling = window.setTimeout(function () {
+				setDuration(350)
+				setX({ red: 0, lime: 0, blue: 0 })
+			}, 60)
+		}
 		window.addEventListener('scroll', handleScroll, {
 			passive: true,
 		})
@@ -71,12 +71,12 @@ const RGBSplit: React.FC = ({ children }) => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
 		}
-	}, [])
+	}, [setSplit])
 
 	return (
 		<div className="wrapper">
 			{splitIt &&
-				['red', 'lime', 'blue'].map(color => (
+				['red', 'lime', 'blue'].map((color) => (
 					<div
 						className={`split`}
 						key={color}

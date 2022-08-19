@@ -1,6 +1,7 @@
 interface Props {
 	title: string
 	href: string
+	children?: React.ReactNode
 }
 
 const ContactLink: React.FC<Props> = ({ href, children, title }) => (
