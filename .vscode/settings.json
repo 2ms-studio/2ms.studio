@@ -11,5 +11,8 @@
 	},
 	"[typescriptreact]": {
 		"editor.formatOnSave": true
+	},
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "file:///Users/alex_sanders/Documents/Dev/2ms.studio/.github/workflows/deploy.yml"
 	}
 }
