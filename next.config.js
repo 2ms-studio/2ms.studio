@@ -14,6 +14,9 @@ const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+	images: {
+		loader: 'custom',
+	},
 	webpack: (
 		config,
 		{ buildId, dev, isServer, defaultLoaders, nextRuntime, webpack },

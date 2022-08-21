@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "next build && next export",
 		"start": "NODE_ENV=production next start",
 		"now-build": "pnpm upload-images && next build",
 		"lint": "next lint",
@@ -40,5 +40,6 @@
 		"mkdirp": "^1.0.4",
 		"typescript": "4.7.4",
 		"webpack": "5.74.0"
-	}
+	},
+	"packageManager": "pnpm@7.9.3"
 }

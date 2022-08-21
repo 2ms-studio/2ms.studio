@@ -1,4 +1,3 @@
-import NextImage from 'next/image'
 import LazyLoad from 'react-lazyload'
 import imageURI from '../lib/imageURI'
 
@@ -20,14 +19,23 @@ const Image: React.FC<{ src: string; width?: number; alt?: string }> = ({
 				paddingTop: `${100 * uploads[src].ratio}%`,
 			}}
 		>
-			<NextImage
-				layout="fill"
-				width={width}
-				loader={imageURI}
-				src={src}
-				alt={alt}
-				sizes={`(max-width: 639px) 100vw, ${width}px`}
-			/>
+			<picture>
+				<source
+					srcSet={`${imageURI({ width: width * 3, src })} 3x, ${imageURI({
+						width: width * 2,
+						src,
+					})} 2x, ${imageURI({
+						width,
+						src,
+					})} 1x`}
+					type="image/webp"
+				/>
+				<img
+					src={imageURI({ width, src })}
+					alt={alt}
+					sizes={`(max-width: 639px) 100vw, ${width}px`}
+				/>
+			</picture>
 		</div>
 		<style jsx>{`
 			div {
