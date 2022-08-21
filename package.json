@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build && next export",
+		"build": "pnpm upload-images && next build && next export",
 		"start": "NODE_ENV=production next start",
 		"now-build": "pnpm upload-images && next build",
 		"lint": "next lint",
