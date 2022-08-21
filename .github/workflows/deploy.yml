@@ -17,6 +17,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm i --frozen-lockfile
       - run: pnpm build
+      - run: touch out/.nojekyll
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
