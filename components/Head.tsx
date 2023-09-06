@@ -26,6 +26,10 @@ const Head: React.FC<Props> = ({
 		<meta charSet="utf-8" />
 		<meta name="description" content={description} />
 		<title>{['2MS', title].filter(Boolean).join(' · ')}</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
 		<meta property="og:site_name" content="2MS.studio" />
 		<meta
 			property="og:title"
