@@ -1,12 +1,8 @@
 import NextApp from 'next/app'
-import Router from 'next/router'
 import Canvas from '../components/Canvas'
 import Head from '../components/Head'
 import Nav from '../components/Nav'
 import reset from '../lib/css_reset'
-import * as gtag from '../lib/gtag'
-
-Router.events.on('routeChangeComplete', (url: string) => gtag.pageview(url))
 
 export default class App extends NextApp {
 	public render() {
