@@ -1,4 +1,3 @@
-const withPreact = require('next-plugin-preact')
 const withMDX = require('@next/mdx')({
 	extension: /\.mdx?$/,
 	options: {
@@ -11,30 +10,16 @@ const withMDX = require('@next/mdx')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	output: 'export',
 	reactStrictMode: true,
-	swcMinify: true,
 	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-	images: {
-		loader: 'custom',
-	},
-	webpack: (
-		config,
-		{ buildId, dev, isServer, defaultLoaders, nextRuntime, webpack },
-	) => {
+	webpack(config) {
 		config.module.rules.push({
 			test: /\.svg$/,
-			issuer: /\.tsx?$/,
-			// include: [options.dir],
-			use: [
-				'next-swc-loader',
-				{
-					loader: '@svgr/webpack',
-					options: { babel: false },
-				},
-			],
+			use: ['@svgr/webpack'],
 		})
 		return config
 	},
 }
 
-module.exports = withMDX(withPreact(nextConfig))
+module.exports = withMDX(nextConfig)
