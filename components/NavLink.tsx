@@ -10,7 +10,7 @@ export interface Props {
 const NavLink: React.FC<Props> = ({ children, router, href }) => {
 	return (
 		<>
-			<Link href={href}>
+			<Link href={href} legacyBehavior>
 				<a className={router.pathname === href ? 'active' : ''}>{children}</a>
 			</Link>
 
