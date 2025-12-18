@@ -97,7 +97,7 @@ const Shop = () => (
 		<h2>Original photography by Dan Tombs</h2>
 		<aside>
 			<p>
-				To order, visit my store here <a href="https://2ms-studio-2.myshopify.com">webstore</a> or if you prefer or have perosnalisation requests email <a href="mailto:dan@2ms.tv">dan@2ms.tv</a> with your
+				To order, visit my store <a href="https://2ms-studio-2.myshopify.com">here</a> or if you prefer or have personalisation requests email <a href="mailto:dan@2ms.tv">dan@2ms.tv</a> with your
 				choice of image and your shipping address.
 			</p>
 			<p>
